@@ -1,0 +1,41 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@import url('https://fonts.googleapis.com/css?family=Copse|Roboto');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica,  serif;
+  @apply .text-black;
+}
+
+h1, h2, h3 {
+  font-family: 'Copse', Times New Roman, serif;
+  font-weight: 200;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-rows: minmax(70px,auto) minmax(calc(100vh - 170px), auto) minmax(100px, auto);
+  min-height: 100vh;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.bg-gradient {
+  background: linear-gradient(45deg, #1f2421 0%, #216869 35%, #9cc5a1 100%)
+}
+
+.transition {
+  transition: all 0.2s ease;
+}
+
+@tailwind utilities;
