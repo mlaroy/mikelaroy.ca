@@ -1,11 +1,17 @@
 import React from 'react'
-import Layout from '../components/layout'
 
-const NotFoundPage = () => (
+import Layout from '../components/layout'
+import Section from '../components/Section'
+import CustomLink from '../components/CustomLink'
+
+const NotFound = () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Section css="container p-8 text-center">
+      <h1 className="text-4xl mb-4">NOT FOUND</h1>
+      <p className="text-xl mb-4">That page doesn't exist 😕</p>
+      <CustomLink to="/">Home</CustomLink>
+    </Section>
   </Layout>
 )
 
-export default NotFoundPage
+export default NotFound
