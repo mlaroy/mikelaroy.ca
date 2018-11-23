@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 
 import styled from 'styled-components'
 import Layout from '../components/layout'
 // import Image from '../components/image'
-import Bumper from '../components/Bumper'
-import CustomLink from '../components/CustomLink'
 import ContactForm from '../components/ContactForm'
 import Section from '../components/Section'
 import Split from '../components/Split'
