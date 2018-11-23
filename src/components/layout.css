@@ -59,14 +59,18 @@ h1, h2, h3 {
   left: 0;
   border-radius: 3px;
   width: 55px;
-  background: blue;
   height: 5px;
   display: block;
+  @apply .bg-blue-dark;
 
 }
 
 .bg-gradient {
   background: linear-gradient(45deg, #1f2421 0%, #216869 35%, #9cc5a1 100%)
+}
+
+.blog-article + .blog-article {
+  @apply .border-t .border-grey-dark .border-solid .pt-16;
 }
 
 .transition {

@@ -5,7 +5,8 @@ import Textarea from './Textarea'
 class ContactForm extends Component {
   render() {
     return (
-      <form method="post" action="/success" netlify data-netlify-honeypot="bot-field" name="contact">
+      <form method="post" action="/success" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
+        <input type="hidden" name="form-name" value="contact" />
         <Input type="hidden" name="bot-field" />
         <Input name="name" label={true} required={true} />
         <Input name="email" type="email" label={true} required={true} />

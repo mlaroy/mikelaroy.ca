@@ -4,7 +4,8 @@ import { Link } from 'gatsby';
 class CustomLink extends Component {
   render() {
     const { children, css, to, external = false, icon = false } = this.props;
-    const classes = `text-blue hover:text-orange transition ${css}`
+    const classes = `hover:text-orange transition ${css ? css : 'text-blue-dark'}`
+
     if (external) {
       return (
         <a href={to} className={classes}>

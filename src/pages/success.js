@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Section from '../components/Section'
 import CustomLink from '../components/CustomLink'
 
-const SecondPage = () => (
+const Success = () => (
   <Layout>
     <Section css="container p-8 text-center">
       <h1 className="text-4xl mb-4">Success!</h1>
@@ -14,4 +14,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Success

@@ -1,14 +1,20 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import Section from '../components/Section'
+import BlogTeaser from '../components/BlogTeaser'
 
-const SecondPage = () => (
+const Success = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Section css="container p-8">
+      <h1 className="text-4xl mb-4 section-heading">Blog</h1>
+    </Section>
+    <Section css="container p-8">
+      <BlogTeaser />
+      <BlogTeaser />
+      <BlogTeaser />
+    </Section>
   </Layout>
 )
 
-export default SecondPage
+export default Success

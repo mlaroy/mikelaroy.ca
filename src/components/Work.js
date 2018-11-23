@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import sf from '../images/sf.png';
 import vct from '../images/vct.png';
@@ -27,7 +27,7 @@ class Work extends Component {
     const works = getWorks();
     const { active } = this.state;
     return (
-      <div>
+      <Fragment>
         <h2 className="text-4xl mb-4 md:text-center">Recent Work</h2>
         <div className="flex justify-between flex-wrap" role="tablist" aria-controls="work-container">
           {works.map( work => {
@@ -52,7 +52,7 @@ class Work extends Component {
             <img src={active.image} className="shadow" />
           </div>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }
