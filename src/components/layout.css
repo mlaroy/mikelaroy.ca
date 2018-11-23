@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica,  serif;
-  @apply .text-black;
+  @apply .text-black .leading-normal;
 }
 
 h1, h2, h3 {
@@ -28,6 +28,41 @@ h1, h2, h3 {
 
 .button {
   cursor: pointer;
+  transition: all 0.2 ease;
+  @apply .px-8 .py-4 .rounded .bg-white .mt-4 .no-underline .inline-block .shadow;
+}
+
+.scroll-top-button {
+  position: fixed;
+  bottom: 45px;
+  right: 40px;
+}
+
+.button-small {
+  cursor: pointer;
+  transition: all 0.2 ease;
+  @apply .px-4 .py-2 .rounded .bg-white .mt-4 .no-underline .inline-block .shadow;
+}
+
+.button-small.active {
+  @apply .bg-blue .text-white;
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 4rem;
+}
+.section-heading:before {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  border-radius: 3px;
+  width: 55px;
+  background: blue;
+  height: 5px;
+  display: block;
+
 }
 
 .bg-gradient {
