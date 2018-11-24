@@ -42,11 +42,13 @@ class Work extends Component {
         nextItem = refs[next];
         break;
     }
-    console.log(nextItem);
+
+    // make all other buttons unfocusable
     refs.forEach(ref => {
       this.refs[ref].setAttribute('tabIndex', '-1');
     })
     const activeRef = this.refs[nextItem];
+    // make next button focusable
     activeRef.setAttribute('tabindex', '0');
     activeRef.focus();
   }
@@ -56,7 +58,6 @@ class Work extends Component {
     const totalWorks = this.state.works.length;
     const keyCode = e.keyCode;
 
-    console.log(keyCode);
     switch (keyCode) {
       case 37:
         this.focusActiveButton('prev');
