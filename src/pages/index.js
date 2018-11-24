@@ -40,7 +40,7 @@ class IndexPage extends Component {
             <Work />
           </Narrow>
         </Section>
-        <Split left={left} right={right} />
+        {/* <Split left={left} right={right} /> */}
         <Section css="bg-white">
           <Narrow>
             <h2 className="text-5xl section-heading" id="about">About</h2>

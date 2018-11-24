@@ -11,46 +11,117 @@ class Work extends Component {
     super(props);
     const works = getWorks();
     this.state = {
-      active: works[0]
+      works: works,
+      activeIndex: 0
     }
     this.setActiveWork = this.setActiveWork.bind(this);
+    this.checkActive = this.checkActive.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.focusActiveButton = this.focusActiveButton.bind(this);
   }
 
-  setActiveWork(work) {
+  setActiveWork(index) {
     this.setState({
-      active: work
+      activeIndex: index
     })
-    console.log(this.state);
+  }
+
+  focusActiveButton(direction) {
+    const currentIndex = this.state.activeIndex;
+    const totalWorks = this.state.works.length;
+    const refs = Object.keys(this.refs);
+
+    let nextItem;
+    switch(direction) {
+      case 'prev':
+        const prev = currentIndex > 0 ? currentIndex - 1 : totalWorks - 1
+        nextItem = refs[prev];
+        break;
+      case 'next':
+        const next = currentIndex < totalWorks - 1 ? currentIndex + 1 : 0
+        nextItem = refs[next];
+        break;
+    }
+    console.log(nextItem);
+    refs.forEach(ref => {
+      this.refs[ref].setAttribute('tabIndex', '-1');
+    })
+    const activeRef = this.refs[nextItem];
+    activeRef.setAttribute('tabindex', '0');
+    activeRef.focus();
+  }
+
+  handleKeyUp(e) {
+    const currentIndex = this.state.activeIndex;
+    const totalWorks = this.state.works.length;
+    const keyCode = e.keyCode;
+
+    console.log(keyCode);
+    switch (keyCode) {
+      case 37:
+        this.focusActiveButton('prev');
+        break;
+      case 39:
+        this.focusActiveButton('next');
+        break;
+    }
+
+  }
+
+
+  checkActive(node, activeIndex) {
+    return node.title == this.state.works[activeIndex].title;
   }
 
   render() {
-    const works = getWorks();
-    const { active } = this.state;
+    const { activeIndex, works } = this.state;
     return (
       <Fragment>
         <h2 className="text-4xl mb-4 md:text-center">Recent Work</h2>
         <div className="flex justify-between flex-wrap" role="tablist" aria-controls="work-container">
-          {works.map( work => {
-            const css = active.title === work.title ? 'button-small active' : 'button-small'
+          {works.map( (work, index) => {
+            const isActive = this.checkActive(work, activeIndex)
+            const css = isActive ? 'button-small active' : 'button-small'
+            const selected = isActive || false;
             return (
               <button
+                ref={work.id}
                 className={css}
-                key={work.image}
-                onClick={ () => this.setActiveWork(work)}>
+                aria-selected={selected}
+                aria-controls={work.title}
+                tabIndex={isActive ? '0' : '-1'}
+                key={work.id}
+                onFocus={() => this.setActiveWork(index)}
+                onKeyUp={ event => this.handleKeyUp(event)}
+                >
                 {work.title}
               </button>
             )
           })}
         </div>
-        <div role="alert" aria-live="polite" className="mt-8 flex flex-col md:flex-row" id="work-container">
-          <div className="md:w-3/5 pb-4 md:pr-8">
-            <h3 className="text-2xl mb-4">{active.title}</h3>
-            <p className="mb-4">{active.description}</p>
-            <CustomLink to={active.url} external={true}>See this project</CustomLink>
-          </div>
-          <div className="md:w-2/5 flex flex-col justify-center">
-            <img src={active.image} className="shadow" />
-          </div>
+        <div role="alert" aria-live="polite" className="mt-8">
+          {works.map( work => {
+            const isActive = this.checkActive(work, activeIndex);
+            const activeClass = 'flex flex-col md:flex-row';
+            return (
+              <div
+                key={work.image}
+                tabIndex={isActive ? '0' : '-1'}
+                aria-hidden={isActive ? false : true}
+                role="tabpanel"
+                className={isActive ? activeClass : ''}
+                id={work.id}>
+                <div className="md:w-3/5 pb-4 md:pr-8" >
+                  <h3 className="text-2xl mb-4">{work.title}</h3>
+                  <p className="mb-4">{work.description}</p>
+                  <CustomLink to={work.url} external={true}>See this project</CustomLink>
+                </div>
+                <div className="md:w-2/5 flex flex-col justify-center">
+                  <img src={work.image} className="shadow" alt={work.title} />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </Fragment>
     );
@@ -61,24 +132,28 @@ const getWorks = () => {
   return [
     {
       image: ipom,
+      id: 'ipom',
       title: 'In Pursuit Of More',
       description: 'A consulting project for a fantastic food and lifestyle blog, IPOM was a total rebuild - with a new design, I did both the front-end and the WordPress back-end, greatly improving load times and overall site speed.',
       url: 'http://inpursuitofmore.com/'
     },
     {
       image: sf,
+      id: 'sf',
       title: 'Samuel French',
       description: 'The leader of the front-end team for this project for Engine Digital, I was responsible for the front-end on this e-commerce project for Samuel French. Most notable was the complex Vue integration managing user logins, comment systems, shopping carts, and the vast product catalog.',
       url: 'https://www.samuelfrench.com/'
     },
     {
       image: credential,
+      id: 'credential',
       title: 'Credential Direct',
       description: 'Another Engine Digital project, Credential Direct was a top-to-bottom WordPress build. As the lead developer, I built out the front-end, as well as the WordPress integration, including JavaScript features using the WordPress REST API.',
       url: 'https://credentialdirect.com/'
     },
     {
       image: vct,
+      id: 'vct',
       title: 'Vancouver Civic Theatres',
       description: 'Beautifully designed at Engine Digital, this project was front-end only. As the lead developer for this VCT project, I handled all of the usual suspects in the front end: HTML, CSS, and JavaScript. This includes some complex tools like a venue availability calendar and rental estimator.',
       url: 'https://vancouvercivictheatres.com/'

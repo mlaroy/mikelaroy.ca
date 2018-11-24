@@ -18,7 +18,7 @@ class Footer extends Component {
           type="button"
           className="scroll-top-button"
           onClick={() => this.backToTop()}>
-          Back to top &uarr;
+          Top &uarr;
         </button>
         <div className="md:flex justify-between h-full p-8 text-center md:text-left">
           <p className="self-center mb-4 md:m-0">&copy; {" "}{year}{" "}

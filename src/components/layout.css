@@ -44,6 +44,11 @@ h1, h2, h3 {
   @apply .px-4 .py-2 .rounded .bg-white .mt-4 .no-underline .inline-block .shadow;
 }
 
+.button-small:hover,
+.button-small:focus {
+  @apply .text-orange;
+}
+
 .button-small.active {
   @apply .bg-blue .text-white;
 }
@@ -75,6 +80,10 @@ h1, h2, h3 {
 
 .transition {
   transition: all 0.2s ease;
+}
+
+[aria-hidden="true"] {
+  display: none;
 }
 
 @tailwind utilities;
