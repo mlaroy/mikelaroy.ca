@@ -7,8 +7,32 @@ const path = require('path');
 
 exports.createPages = ({ graphql, actions}) => {
   const { createPage } = actions;
-  createPage({
-    path: '/some-fake-page',
-    component: path.resolve('./src/components/postLayout.js'),
+
+  return new Promise( (resolve, reject) => {
+    graphql(`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `).then(results => {
+      const { edges } = results.data.allMarkdownRemark;
+      edges.forEach( ({node}) => {
+        createPage({
+          path: `/blog${node.frontmatter.slug}`,
+          component: path.resolve('./src/components/postLayout.js'),
+          context: {
+            slug: node.frontmatter.slug
+          }
+        })
+        resolve();
+      })
+    })
   });
 }

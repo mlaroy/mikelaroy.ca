@@ -79,7 +79,7 @@ class Work extends Component {
     return (
       <Fragment>
         <h2 className="text-4xl mb-4 md:text-center">Recent Work</h2>
-        <div className="flex justify-between flex-wrap" role="tablist" aria-controls="work-container">
+        <div className="flex justify-between flex-wrap" role="tablist">
           {works.map( (work, index) => {
             const isActive = this.checkActive(work, activeIndex)
             const css = isActive ? 'button-small active' : 'button-small'
@@ -89,9 +89,11 @@ class Work extends Component {
                 ref={work.id}
                 className={css}
                 aria-selected={selected}
-                aria-controls={work.title}
+                aria-controls={work.id}
                 tabIndex={isActive ? '0' : '-1'}
                 key={work.id}
+                id={work.title}
+                role="tab"
                 onFocus={() => this.setActiveWork(index)}
                 onKeyUp={ event => this.handleKeyUp(event)}
                 >
@@ -108,8 +110,9 @@ class Work extends Component {
               <div
                 key={work.image}
                 tabIndex={isActive ? '0' : '-1'}
-                aria-hidden={isActive ? false : true}
+                aria-hidden={isActive ? 'false' : 'true'}
                 role="tabpanel"
+                aria-labelledby={work.title}
                 className={isActive ? activeClass : ''}
                 id={work.id}>
                 <div className="md:w-3/5 pb-4 md:pr-8" >

@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import ContactForm from '../components/ContactForm'
 import Section from '../components/Section'
 import Split from '../components/Split'
+import LatestPost from '../components/latestPost'
 import BlogTeaser from '../components/BlogTeaser'
 import Work from '../components/Work'
 import CustomLink from '../components/CustomLink';
@@ -40,7 +41,7 @@ class IndexPage extends Component {
             <Work />
           </Narrow>
         </Section>
-        {/* <Split left={left} right={right} /> */}
+        <Split left={left} right={right} />
         <Section css="bg-white">
           <Narrow>
             <h2 className="text-5xl section-heading" id="about">About</h2>
@@ -65,7 +66,8 @@ class IndexPage extends Component {
         <Section css="bg-grey-lighter">
           <Narrow>
             <h2 className="text-5xl section-heading " id="contact">Contact</h2>
-            <p className="text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch:</p>
+            <p className="text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch. Check out these {" "}
+            <CustomLink to="/blog/guidelines-webdesign-request-proposal">guidelines</CustomLink> for RFPs.</p>
             <ContactForm />
           </Narrow>
         </Section>
@@ -78,7 +80,7 @@ const splitLeft = () => {
   return (
     <Fragment>
       <h3 className="text-4xl mb-8">Latest thoughts</h3>
-      <BlogTeaser linkColor="text-white" small={true} />
+      <LatestPost />
     </Fragment>
   );
 };
@@ -95,7 +97,8 @@ const splitRight = () => {
         Fonts come from Google fonts - Copse (serif) for headings, and Roboto (sans-serif) for body text.
       </p>
       <p>
-        This site is hosted on Netlify, and uses deployment hooks with Github.
+        This site is hosted on Netlify, and is deployed from {" "}
+        <CustomLink to="https://github.com/mlaroy/mikelaroy.ca" css="text-white hover:text-blue">Github</CustomLink>.
       </p>
     </aside>
   )

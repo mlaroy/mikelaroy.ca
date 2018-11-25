@@ -2,22 +2,20 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import BlogTeaser from '../components/BlogTeaser'
 
-const Archive = () => (
+const LatestPost = () => (
   <StaticQuery
     query={POST_ARCHIVE_QUERY}
     render={({allMarkdownRemark}) => (
       <>
-        {allMarkdownRemark.edges.map(edge =>
-          <BlogTeaser key={edge.node.frontmatter.slug} post={edge} />)
-        }
+        {allMarkdownRemark.edges.map(edge => <BlogTeaser key={edge.node.frontmatter.slug} post={edge} />)}
       </>
     )}
   />
 )
 
 const POST_ARCHIVE_QUERY = graphql`
-  query BlogPostArchive {
-    allMarkdownRemark(limit: 10, sort: {
+  query LatestPost {
+    allMarkdownRemark(limit: 1, sort: {
       order: DESC
       fields: [frontmatter___date]
     })
@@ -37,4 +35,4 @@ const POST_ARCHIVE_QUERY = graphql`
   }
 `
 
-export default Archive
+export default LatestPost

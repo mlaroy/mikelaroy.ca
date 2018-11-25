@@ -32,6 +32,10 @@ h1, h2, h3 {
   @apply .px-8 .py-4 .rounded .bg-white .mt-4 .no-underline .inline-block .shadow;
 }
 
+.bg-blue a {
+  @apply .text-white;
+}
+
 .scroll-top-button {
   position: fixed;
   bottom: 45px;
@@ -56,17 +60,17 @@ h1, h2, h3 {
 .section-heading {
   position: relative;
   margin-bottom: 4rem;
+  @apply .leading-none;
 }
 .section-heading:before {
   content: '';
   position: absolute;
   bottom: -2rem;
   left: 0;
-  border-radius: 3px;
   width: 55px;
   height: 5px;
   display: block;
-  @apply .bg-blue-dark;
+  @apply .bg-blue-dark .rounded;
 
 }
 
@@ -85,5 +89,95 @@ h1, h2, h3 {
 [aria-hidden="true"] {
   display: none;
 }
+
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body p,
+.article-body ul,
+.article-body img,
+.article-body picture,
+.article-body figure,
+.article-body blockquote {
+  @apply .mb-4 .leading-normal;
+}
+
+.article-body p + h2,
+.article-body p + h3,
+.article-body blockquote + h2,
+.article-body blockquote + h3,
+.article-body img + h2,
+.article-body img + h3,
+.article-body ul + h2,
+.article-body ul + h3 {
+  @apply .pt-4;
+}
+
+.article-body p,
+.article-body ul,
+.article-body a {
+  @apply .text-base;
+}
+
+@media (min-width: 768px) {
+  .article-body p,
+  .article-body ul,
+  .article-body a {
+    @apply .text-lg;
+  }
+}
+
+.article-body blockquote,
+blockquote {
+  @apply .m-4 .pl-8 .font-serif .relative;
+}
+
+.article-body blockquote:before,
+blockquote:before {
+  content: '';
+  @apply .bg-blue-dark .absolute .rounded;
+  width: 5px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+/* .article-body blockquote:after,
+blockquote:after {
+  content: '“';
+  @apply .text-6xl .block .absolute;
+  top: 0;
+  left: 2rem;
+  line-height: 1;
+
+} */
+
+.article-body blockquote p,
+blockquote p {
+  @apply .text-xl;
+}
+
+.article-body a {
+  @apply .text-blue;
+}
+
+.article-body a:hover,
+.article-body a:focus {
+  @apply .text-orange;
+}
+
+@media (min-width: 768px) {
+  .article-body blockquote,
+  blockquote {
+    @apply .m-8 .px-8;
+  }
+  .article-body blockquote p,
+  blockquote p {
+    @apply .text-2xl;
+  }
+}
+
 
 @tailwind utilities;
