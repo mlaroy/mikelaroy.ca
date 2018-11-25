@@ -26,10 +26,20 @@ h1, h2, h3 {
   min-height: 100vh;
 }
 
+footer a,
+.header-nav a {
+  @apply .text-blue;
+}
+
 .button {
   cursor: pointer;
   transition: all 0.2 ease;
-  @apply .px-8 .py-4 .rounded .bg-white .mt-4 .no-underline .inline-block .shadow;
+  @apply .px-8 .py-4 .rounded .bg-white .mt-4 .no-underline .inline-block .shadow .text-blue;
+}
+
+.button:hover,
+.button:focus {
+  @apply .text-orange;
 }
 
 .bg-blue a {
@@ -70,7 +80,7 @@ h1, h2, h3 {
   width: 55px;
   height: 5px;
   display: block;
-  @apply .bg-blue-dark .rounded;
+  @apply .bg-blue .rounded;
 
 }
 
@@ -136,7 +146,7 @@ blockquote {
 .article-body blockquote:before,
 blockquote:before {
   content: '';
-  @apply .bg-blue-dark .absolute .rounded;
+  @apply .bg-blue .absolute .rounded;
   width: 5px;
   height: 100%;
   left: 0;

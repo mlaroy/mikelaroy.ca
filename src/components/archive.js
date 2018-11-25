@@ -8,7 +8,7 @@ const Archive = () => (
     render={({allMarkdownRemark}) => (
       <>
         {allMarkdownRemark.edges.map(edge =>
-          <BlogTeaser key={edge.node.frontmatter.slug} post={edge} />)
+          <BlogTeaser key={edge.node.frontmatter.slug} post={edge} linkColor="text-blue" />)
         }
       </>
     )}

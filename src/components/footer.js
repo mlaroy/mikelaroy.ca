@@ -4,7 +4,6 @@ import CustomLink from '../components/CustomLink'
 class Footer extends Component {
 
   backToTop() {
-    console.log('up');
     window.scrollTo(0,0)
   }
 
@@ -21,13 +20,13 @@ class Footer extends Component {
           Top &uarr;
         </button>
         <div className="md:flex justify-between h-full p-8 text-center md:text-left">
-          <p className="self-center mb-4 md:m-0">&copy; {" "}{year}{" "}
+          <p className="self-center mb-4 md:m-0 text-sm">&copy; {" "}{year}{" "}
             <CustomLink
               external={true}
               css="self-center"
               to="https://mikelaroy.ca">
               Michael LaRoy
-            </CustomLink></p>
+            </CustomLink>&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved</p>
           <ul className="flex justify-center flex-row list-reset align-center text-center md:text-left">
           {links.map(link => {
               return (
