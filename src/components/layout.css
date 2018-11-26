@@ -89,7 +89,7 @@ footer a,
 }
 
 .blog-article + .blog-article {
-  @apply .border-t .border-grey-dark .border-solid .pt-16;
+  @apply .border-t .border-grey-dark .border-solid .pt-16 .mt-16;
 }
 
 .transition {

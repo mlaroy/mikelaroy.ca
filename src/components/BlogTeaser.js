@@ -8,7 +8,7 @@ class BlogTeaser extends Component {
     const { slug, title, date } = post.node.frontmatter;
     const { excerpt } = post.node;
     return (
-      <article className="pb-16 blog-article w-full lg:w-4/5">
+      <article className="blog-article w-full lg:w-4/5">
         <CustomLink to={`/blog${slug}`} css={`${linkColor} no-underline`}>
           <h2 className="text-3xl mb-2">{title}</h2>
         </CustomLink>

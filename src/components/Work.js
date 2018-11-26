@@ -54,8 +54,6 @@ class Work extends Component {
   }
 
   handleKeyUp(e) {
-    const currentIndex = this.state.activeIndex;
-    const totalWorks = this.state.works.length;
     const keyCode = e.keyCode;
 
     switch (keyCode) {
@@ -95,6 +93,7 @@ class Work extends Component {
                 id={work.title}
                 role="tab"
                 onFocus={() => this.setActiveWork(index)}
+                onClick={() => this.setActiveWork(index)}
                 onKeyUp={ event => this.handleKeyUp(event)}
                 >
                 {work.title}
