@@ -98,7 +98,7 @@ const splitRight = () => {
       </p>
       <p>
         This site is hosted on Netlify, and is deployed from {" "}
-        <CustomLink to="https://github.com/mlaroy/mikelaroy.ca" css="text-white hover:text-blue">Github</CustomLink>.
+        <CustomLink to="https://github.com/mlaroy/mikelaroy.ca" css="text-white hover:text-blue" external={true}>Github</CustomLink>.
       </p>
     </aside>
   )
