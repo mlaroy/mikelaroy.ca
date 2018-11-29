@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Layout from './layout'
 import Section from './Section'
 import Signature from './Signature'
+import Helmet from 'react-helmet'
 
 const Narrow = styled.div`
   max-width: 960px;
@@ -12,12 +13,19 @@ const Narrow = styled.div`
 `
 class postLayout extends Component {
   render() {
-    const { markdownRemark } = this.props.data;
-    const { html, timeToRead } = markdownRemark;
+    const { markdownRemark, site } = this.props.data;
+    const { html, timeToRead, excerpt } = markdownRemark;
     const { date, title } = markdownRemark.frontmatter
 
     return (
       <Layout>
+        <Helmet
+          title={`${title} | ${site.siteMetadata.title}`}
+          meta={[
+            { name: 'description', content: excerpt }
+          ]}
+        >
+        </Helmet>
         <Section css="container">
           <Narrow>
             <h1 className="text-3xl md:text-5xl section-heading">{title}</h1>
@@ -41,13 +49,21 @@ class postLayout extends Component {
 
 export const query = graphql`
   query PostQuery($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        description
+        keywords
+      }
+    }
     markdownRemark(frontmatter: {
       slug: {
         eq: $slug
       }
     }) {
       html
-      timeToRead
+      timeToRead,
+      excerpt,
       frontmatter {
         title
         slug

@@ -79,7 +79,7 @@ class IndexPage extends Component {
 const splitLeft = () => {
   return (
     <Fragment>
-      <h3 className="text-2xl md:text-4xl mb-4 section-heading section-heading--inverted">Latest thoughts</h3>
+      <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted">Latest thoughts</h3>
       <LatestPost />
     </Fragment>
   );
