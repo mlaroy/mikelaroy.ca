@@ -12,7 +12,7 @@ import Work from '../components/Work'
 import CustomLink from '../components/CustomLink';
 
 const Narrow = styled.div`
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
   ${tw`px-8 py-16 h-full flex flex-col justify-center`};
 `
@@ -79,7 +79,7 @@ class IndexPage extends Component {
 const splitLeft = () => {
   return (
     <Fragment>
-      <h3 className="text-2xl md:text-4xl mb-8">Latest thoughts</h3>
+      <h3 className="text-2xl md:text-4xl mb-4 section-heading section-heading--inverted">Latest thoughts</h3>
       <LatestPost />
     </Fragment>
   );
@@ -88,7 +88,7 @@ const splitLeft = () => {
 const splitRight = () => {
   return (
     <aside>
-      <h3 className="text-2xl md:text-4xl mb-4">Nerd Zone</h3>
+      <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted">Nerd Zone</h3>
       <p className="text-base md:text-xl mb-4">
         This site was designed in the browser with React/Gatsby, and Tailwind CSS.
       </p>

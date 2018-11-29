@@ -85,7 +85,11 @@ footer a,
   height: 5px;
   display: block;
   @apply .bg-blue .rounded;
+}
 
+.section-heading--inverted:before {
+  content: '';
+  @apply .bg-white .rounded;
 }
 
 .bg-gradient {
