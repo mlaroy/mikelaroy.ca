@@ -64,7 +64,6 @@ class Work extends Component {
         this.focusActiveButton('next');
         break;
     }
-
   }
 
 

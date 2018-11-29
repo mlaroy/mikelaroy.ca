@@ -26,6 +26,10 @@ h1, h2, h3 {
   min-height: 100vh;
 }
 
+.site-logo {
+  /* padding: 1rem; */
+}
+
 footer a,
 .header-nav a {
   @apply .text-blue;
