@@ -24,4 +24,4 @@ I've used [Surge](https://surge.sh) for a number of small projects in the past, 
 
 Great question. To be honest, I'm not quite sure just yet. I've considered putting out tutorials or educational material for web development. There's already so much material out there to learn from - I have yet to figure how I can contribute in the midst of it all. More than likely, it will have to do with front-end topics, JavaScript, and accessibility since those seem to be the things that I do best.
 
-For now, I will continue tinkering here, and see where it takes me.
+For now, I will continue tinkering here, and see where it takes me. I have a few enhancements to make here which I will get to as time permits. It's really nice to have something new in the mean time!

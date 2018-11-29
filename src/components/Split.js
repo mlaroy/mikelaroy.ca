@@ -12,7 +12,7 @@ class Split extends Component {
             </div>
           </div>
         </div>
-        <div className="w-full md:1/2 lg:w-2/5 text-white p-8 bg-orange-dark">
+        <div className="w-full md:1/2 lg:w-2/5 p-8 text-white bg-blue-light">
           <div className="container">
             <div className="md:float-left md:w-4/5">
               {right}

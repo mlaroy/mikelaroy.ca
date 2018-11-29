@@ -8,7 +8,7 @@ class Input extends Component {
     const buttonClass = 'button';
     return (
       <div className="mb-4">
-        {label && <label htmlFor={name} className="block">{capitalize(name)}</label>}
+        {label && <label htmlFor={name} className="block text-base md:text-lg">{capitalize(name)}</label>}
         <input
           className={type !== 'submit' ? inputClass : buttonClass }
           type={type}

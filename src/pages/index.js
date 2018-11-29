@@ -45,18 +45,18 @@ class IndexPage extends Component {
         <Section css="bg-white">
           <Narrow>
             <h2 className="text-5xl section-heading" id="about">About</h2>
-            <p className="text-xl mt-4 mb-4">
+            <p className="text-base md:text-xl mt-4 mb-4">
               While my discipline may be writing code and building websites, my passion is problem solving.
               Sometimes that problem is in the browser, and sometimes that's where it's solved. My goals and
               yours are the same - to get your problems solved!
             </p>
-            <p className="text-xl mt-4 mb-4">
+            <p className="text-base md:text-xl mt-4 mb-4">
               I aim to make things easy for you, the client. While the ecosystem of web technologies is vast and
               complex, that doesn't mean in needs to be hard for you. Ultimately you shoudn't need to worry
               whether I'm using React or Vue, JavaScript or PHP, or WordPress or whatever else to get you
               where you need to go - at the end of the day, you just need it to work.
             </p>
-            <p className="text-xl mt-4 mb-4">
+            <p className="text-base md:text-xl mt-4 mb-4">
               My experience working in agencies, with clients large and small has given me the tools I need
               to help you as a consultant with your project. I'd love to hear from you and see how we can
               work together to build something great!
@@ -66,7 +66,7 @@ class IndexPage extends Component {
         <Section css="bg-grey-lighter">
           <Narrow>
             <h2 className="text-5xl section-heading " id="contact">Contact</h2>
-            <p className="text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch. Check out these {" "}
+            <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch. Check out these {" "}
             <CustomLink to="/blog/guidelines-webdesign-request-proposal">guidelines</CustomLink> for RFPs.</p>
             <ContactForm />
           </Narrow>
@@ -79,7 +79,7 @@ class IndexPage extends Component {
 const splitLeft = () => {
   return (
     <Fragment>
-      <h3 className="text-4xl mb-8">Latest thoughts</h3>
+      <h3 className="text-2xl md:text-4xl mb-8">Latest thoughts</h3>
       <LatestPost />
     </Fragment>
   );
@@ -88,15 +88,14 @@ const splitLeft = () => {
 const splitRight = () => {
   return (
     <aside>
-      <h3 className="text-4xl mb-4">Nerd Zone</h3>
-      <p className="mb-4">
-        This site was designed in the browser to be optimized for speed and simplicity.
-        It was developed with React/Gatsby, and Tailwind CSS.
+      <h3 className="text-2xl md:text-4xl mb-4">Nerd Zone</h3>
+      <p className="text-base md:text-xl mb-4">
+        This site was designed in the browser with React/Gatsby, and Tailwind CSS.
       </p>
-      <p className="mb-4">
+      <p className="text-base md:text-xl mb-4">
         Fonts come from Google fonts - Copse (serif) for headings, and Roboto (sans-serif) for body text.
       </p>
-      <p>
+      <p className="text-base md:text-xl">
         This site is hosted on Netlify, and is deployed from {" "}
         <CustomLink to="https://github.com/mlaroy/mikelaroy.ca" css="text-white hover:text-blue" external={true}>Github</CustomLink>.
       </p>
