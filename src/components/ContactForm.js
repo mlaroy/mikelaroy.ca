@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { navigateTo } from "gatsby-link";
+import { navigate } from "gatsby-link";
 import Input from './Input'
 import Textarea from './Textarea'
 
@@ -20,23 +20,13 @@ class ContactForm extends Component {
   }
 
   handleChange = e => {
-    console.log('handling change');
     this.setState({[e.target.name]: e.target.value})
-    console.log(this.state);
 
     if(e.target.value == '42') {
       this.setState({
         error: false
       })
     }
-  }
-
-  handleFocus = () => {
-    console.log('handling focus');
-    this.setState({
-      error: false,
-    })
-    console.log(this.state);
   }
 
   validateForm() {
@@ -75,7 +65,7 @@ class ContactForm extends Component {
       })
       if(response) {
         try {
-          navigateTo(action);
+          navigate(action);
         }catch(err) {
           console.warn(err);
           this.setState({
@@ -121,8 +111,7 @@ class ContactForm extends Component {
           type="text"
           required={true}
           value={human}
-          onChange={this.handleChange}
-          onFocus={this.handleFocus} />
+          onChange={this.handleChange} />
         {error && renderError()}
         <Input name="submit" type="submit" label={false} value="Send" />
       </form>
