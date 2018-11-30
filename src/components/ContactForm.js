@@ -73,9 +73,7 @@ class ContactForm extends Component {
           ...this.state
         })
       })
-      const json = await response.json();
-      console.log(json);
-      if(json) {
+      if(response) {
         navigateTo(action)
       }
     }catch(err) {
