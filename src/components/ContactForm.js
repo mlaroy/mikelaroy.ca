@@ -65,7 +65,7 @@ class ContactForm extends Component {
 
     const action = form.getAttribute("action")
     try {
-      const response = await fetch(action, {
+      const response = await fetch('/', {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
@@ -76,7 +76,7 @@ class ContactForm extends Component {
       const json = await response.json();
       console.log(json);
       if(json) {
-        navigateTo(form.getAttribute('action'))
+        navigateTo(action)
       }
     }catch(err) {
       console.warn(err);
