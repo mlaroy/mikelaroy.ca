@@ -74,7 +74,15 @@ class ContactForm extends Component {
         })
       })
       if(response) {
-        navigateTo(action)
+        try {
+          navigateTo(action);
+        }catch(err) {
+          console.warn(err);
+          this.setState({
+            error: true
+          })
+        }
+
       }
     }catch(err) {
       console.warn(err);
