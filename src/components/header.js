@@ -1,13 +1,11 @@
 import React from 'react'
 import CustomLink from '../components/CustomLink'
-import logo from '../images/signature.svg'
-import Signature from './Signature'
+import Signature from './signature'
 
 const Header = ({ siteTitle }) => (
   <header className="w-full container">
     <div className="flex justify-between h-full px-8">
       <CustomLink to="/" css="self-center font-serif no-underline text-xl relative">
-        {/* {siteTitle} */}
         <Signature css="site-logo mt-4 w-32 md:w-48" width="180" />
       </CustomLink>
       <nav className="flex align-center header-nav">

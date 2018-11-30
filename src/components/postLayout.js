@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from './layout'
 import Section from './Section'
-import Signature from './Signature'
+import Signature from './signature'
 import Helmet from 'react-helmet'
 
 const Narrow = styled.div`
