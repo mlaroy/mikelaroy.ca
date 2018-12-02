@@ -6,7 +6,21 @@
 const path = require('path');
 
 exports.createPages = ({ graphql, actions}) => {
-  const { createPage } = actions;
+
+  const { createPage, createRedirect } = actions;
+  createRedirect({
+    fromPath: `/about`,
+    isPermanent: true,
+    redirectInBrowser: true,
+    toPath: `/#about`,
+  });
+
+  createRedirect({
+    fromPath: `/general`,
+    isPermanent: true,
+    redirectInBrowser: true,
+    toPath: `/blog`,
+  })
 
   return new Promise( (resolve, reject) => {
     graphql(`
