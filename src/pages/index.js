@@ -22,14 +22,24 @@ const Hero = styled.div`
 `
 
 class IndexPage extends Component {
+  state = {
+    hasJS: false
+  }
+  componentDidMount() {
+    this.addBodyClass();
+  }
   addBodyClass() {
-    const body = document.body;
-    body.classList.add('js');
+    if(typeof window !== 'undefined'){
+      const body = document.body;
+      body.classList.add('js');
+      this.setState({
+        hasJS: true
+      })
+    }
   }
   render() {
     const left = splitLeft();
     const right = splitRight();
-    this.addBodyClass();
     return (
       <Layout>
         <Hero>
@@ -73,7 +83,7 @@ class IndexPage extends Component {
             <h2 className="text-5xl section-heading " id="contact">Contact</h2>
             <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch. Check out these {" "}
             <CustomLink to="/blog/guidelines-webdesign-request-proposal">guidelines</CustomLink> for RFPs.</p>
-            {renderContactForm()}
+            {renderContactForm(this.state)}
           </Narrow>
         </Section>
       </Layout>
@@ -110,8 +120,7 @@ const splitRight = () => {
 
 export default IndexPage;
 
-const renderContactForm = () => {
-  const hasJS = document.body.classList.contains('js');
+const renderContactForm = ({hasJS}) => {
   if(!hasJS) {
     return (
       <noscript>This form requires JavaScript, sorry!</noscript>
