@@ -116,7 +116,9 @@ class Work extends Component {
                 <div className="md:w-3/5 pb-4 md:pr-8" >
                   <h3 className="text-2xl mb-4">{work.title}</h3>
                   <p className="mb-4">{work.description}</p>
-                  <CustomLink to={work.url} external={true}>See this project</CustomLink>
+                  {work.url !== null && (
+                    <CustomLink to={work.url} external={true}>See this project</CustomLink>
+                  )}
                 </div>
                 <div className="md:w-2/5 flex flex-col justify-center">
                   <img src={work.image} className="shadow" alt={work.title} />
@@ -150,8 +152,8 @@ const getWorks = () => {
       image: credential,
       id: 'credential',
       title: 'Credential Direct',
-      description: 'Another Engine Digital project, Credential Direct was a top-to-bottom WordPress build. As the lead developer, I built out the front-end, as well as the WordPress integration, including JavaScript features using the WordPress REST API.',
-      url: 'https://credentialdirect.com/'
+      description: 'Another Engine Digital project, Credential Direct was a top-to-bottom WordPress build. As the lead developer, I built out the front-end, as well as the WordPress integration, including JavaScript features using the WordPress REST API. Update: it appears to have been acquired, so the site is no longer up so no link is provided. ',
+      url: null
     },
     {
       image: vct,
