@@ -197,5 +197,10 @@ blockquote p {
   }
 }
 
+code {
+  background: #fafafa;
+  padding: 0 3px;
+  font-size: 90%;
+}
 
 @tailwind utilities;
