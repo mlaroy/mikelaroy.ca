@@ -121,6 +121,14 @@ footer a,
   @apply .mb-4 .leading-normal;
 }
 
+.article-body h2 {
+  @apply .text-3xl;
+}
+
+.article-body h3 {
+  @apply .uppercase .text-lg;
+}
+
 .article-body p + h2,
 .article-body p + h3,
 .article-body blockquote + h2,
