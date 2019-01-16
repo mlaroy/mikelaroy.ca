@@ -18,7 +18,7 @@ With the abundance of tools and the narrowing of my focus as a developer, I deci
 
 So instead, I opted to build this site using [Gatsby](https://www.gatsbyjs.org), which is a static site builder using React. As my development focus has changed more towards JavaScript lately, building a site in React made sense on a number of levels. To further simplify (and reduce spending), I decided to move away from traditinal web hosting through a C-Panel type platform since that was no longer necessary when static site hosting can be easy and free.
 
-I've used [Surge](https://surge.sh) for a number of small projects in the past, but this time I chose [Netlify](https://netlify.com) for its ease of connecting a git repo, build scripts, and the possibility of integrating lamba functions as a future enhancement. They also make static site form submissions easy (and free). Lots of great reasons, really.
+I've used [Surge](https://surge.sh) for a number of small projects in the past, but this time I chose [Netlify](https://netlify.com) for its ease of connecting a git repo, build scripts, and the possibility of integrating lambda functions as a future enhancement. They also make static site form submissions easy (and free). Lots of great reasons, really.
 
 ## What's next?
 
