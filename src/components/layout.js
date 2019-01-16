@@ -40,7 +40,7 @@ const Layout = ({ children, description, title }) => (
                 },
                 {
                   property: `og:image`,
-                  content: image,
+                  content: `https://mikelaroy.ca/icons/icon-512x512.png`,
                 },
                 {
                   property: `og:description`,
