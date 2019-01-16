@@ -63,7 +63,7 @@ const Layout = ({ children, description, title }) => (
                 },
                 {
                   property: `og:type`,
-                  content: `512`,
+                  content: `website`,
                 },
                 {
                   property: `og:image:width`,
