@@ -67,7 +67,7 @@ class IndexPage extends Component {
             </p>
             <p className="text-base md:text-xl mt-4 mb-4">
               I aim to make things easy for you, the client. While the ecosystem of web technologies is vast and
-              complex, that doesn't mean in needs to be hard for you. Ultimately you shoudn't need to worry
+              complex, that doesn't mean it needs to be hard for you. Ultimately you shoudn't need to worry
               whether I'm using React or Vue, JavaScript or PHP, or WordPress or whatever else to get you
               where you need to go - at the end of the day, you just need it to work.
             </p>
