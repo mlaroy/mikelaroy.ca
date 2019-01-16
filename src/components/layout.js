@@ -40,14 +40,37 @@ const Layout = ({ children, description, title }) => (
                 },
                 {
                   property: `og:image`,
+                  content: `https://mikelaroy.ca/icons/icon-512x512.png`,
+                },
+                {
+                  property: `og:url`,
+                  content: data.site.siteMetadata.url,
+                },
+                {
+                  property: `og:image:url`,
                   content: `http://mikelaroy.ca/icons/icon-512x512.png`,
                 },
                 {
+                  property: `og:image:secure_url`,
+                  content: `https://mikelaroy.ca/icons/icon-512x512.png`,
+                },
+                {
+                  property: `og:image:type`,
+                  content: `image/png`,
+                },                {
                   property: `og:description`,
                   content: metaDescription,
                 },
                 {
                   property: `og:type`,
+                  content: `512`,
+                },
+                {
+                  property: `og:image:width`,
+                  content: `512`,
+                },
+                {
+                  property: `og:image:height`,
                   content: `website`,
                 },
                 {

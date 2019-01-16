@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Michael LaRoy',
     author: 'Michael LaRoy',
+    url: 'https://mikelaroy.ca',
     description: 'Front-End web development consultant in Abbotsford, BC.',
     keywords: 'JavaScript, React, Vue, CSS, WordPress, Gatsby, PHP, Laravel, Tailwind, Node, Abbotsford, Fraser Valley'
   },
