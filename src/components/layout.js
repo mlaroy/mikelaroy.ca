@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 
-import image from '../images/favicon.png';
+import image from '../images/og.jpg';
 import './layout.css'
 
 const Layout = ({ children, description, title }) => (
@@ -48,11 +48,11 @@ const Layout = ({ children, description, title }) => (
                 },
                 {
                   property: `og:image:url`,
-                  content: `http://mikelaroy.ca/icons/icon-512x512.png`,
+                  content: `http://mikelaroy.ca/static/og-fab26ba0f0fdb1208debc35481d52c88.jpg`,
                 },
                 {
                   property: `og:image:secure_url`,
-                  content: `https://mikelaroy.ca/icons/icon-512x512.png`,
+                  content: `https://mikelaroy.ca/static/og-fab26ba0f0fdb1208debc35481d52c88.jpg`,
                 },
                 {
                   property: `og:image:type`,
@@ -67,11 +67,11 @@ const Layout = ({ children, description, title }) => (
                 },
                 {
                   property: `og:image:width`,
-                  content: `512`,
+                  content: `600`,
                 },
                 {
                   property: `og:image:height`,
-                  content: `website`,
+                  content: `400`,
                 },
                 {
                   name: `twitter:card`,
