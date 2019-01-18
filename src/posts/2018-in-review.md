@@ -11,9 +11,9 @@ Professionally, there was a lot of unplanned, unanticipated change too.
 
 ## Position transition - from on-site to remote
 
-I had been working at [Engine Digital](https://enginedigital.com), a top-tier digital agency in Vancouver for the last 3 years, with no plans to change that. In the spring, I decided to leave for a (mostly) remote position, which enabled my (then) fiancée and I to decide make our home in Abbotsford, enabling us to begin our married life outside of the more expensive Vancouver area.
+I had been working at [Engine Digital](https://enginedigital.com), a top-tier digital agency in Vancouver for the last 3 years, with no plans to change that. In the spring, I decided to leave for a (mostly) remote position, which enabled my (then) fiancée and I to decide to make our home in Abbotsford, enabling us to begin our married life outside of the more expensive Vancouver area.
 
-While that job turned out to be not such a great fit, my transition to remote worke had begun. I then worked remotely for Engine for another short stint, before begining a new position with Great-West Life's digital teams; working from home for an Ontario-based development group.
+While that job turned out to be not such a great fit, my transition to remote work had begun. I then worked remotely for Engine for another short stint, before begining a new position with Great-West Life's digital teams; working from home for an Ontario-based development group.
 
 In spite of the upheaval, everything that I had done over the last year got me to where I am: being able to work from home, doing work that I enjoy. And for the most part, that work consists of JavaScript development, among other front-end duties.
 
