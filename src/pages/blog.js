@@ -7,7 +7,7 @@ import Section from '../components/Section'
 import Helmet from 'react-helmet'
 
 const Narrow = styled.div`
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
   ${tw`px-8 py-8 h-full flex flex-col justify-center`};
 `
