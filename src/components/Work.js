@@ -75,7 +75,7 @@ class Work extends Component {
     const { activeIndex, works } = this.state;
     return (
       <Fragment>
-        <h2 className="text-4xl mb-4 md:text-center">Recent Work</h2>
+        <h2 className="text-2xl md:text-4xl mb-4 md:text-center">Recent Work</h2>
         <div className="flex justify-between flex-wrap" role="tablist">
           {works.map( (work, index) => {
             const isActive = this.checkActive(work, activeIndex)
@@ -114,7 +114,7 @@ class Work extends Component {
                 className={isActive ? activeClass : ''}
                 id={work.id}>
                 <div className="md:w-3/5 pb-4 md:pr-8" >
-                  <h3 className="text-2xl mb-4">{work.title}</h3>
+                  <h3 className="text-xl md:text-2xl mb-4">{work.title}</h3>
                   <p className="mb-4">{work.description}</p>
                   {work.url !== null && (
                     <CustomLink to={work.url} external={true}>See this project</CustomLink>

@@ -59,7 +59,7 @@ class IndexPage extends Component {
         <Split left={left} right={right} />
         <Section css="bg-white">
           <Narrow>
-            <h2 className="text-5xl section-heading" id="about">About</h2>
+            <h2 className="text-2xl md:text-5xl section-heading" id="about">About</h2>
             <p className="text-base md:text-xl mt-4 mb-4">
               While my discipline may be writing code and building websites, my passion is problem solving.
               Sometimes that problem is in the browser, and sometimes that's where it's solved. My goals and
@@ -80,7 +80,7 @@ class IndexPage extends Component {
         </Section>
         <Section css="bg-grey-lighter">
           <Narrow>
-            <h2 className="text-5xl section-heading " id="contact">Contact</h2>
+            <h2 className="text-2x md:text-5xl section-heading " id="contact">Contact</h2>
             <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch. Check out these {" "}
             <CustomLink to="/blog/guidelines-webdesign-request-proposal">guidelines</CustomLink> for RFPs.</p>
             {renderContactForm(this.state)}
