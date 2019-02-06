@@ -35,6 +35,25 @@ footer a,
   @apply .text-blue;
 }
 
+.sticky-header {
+  width: 100vw;
+  @apply .sticky;
+  top: 0;
+  z-index: 10;
+}
+.sticky-header::after {
+  content: '';
+  @apply .bg-white;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: -1;
+}
+
+
 .button {
   cursor: pointer;
   transition: all 0.2 ease;

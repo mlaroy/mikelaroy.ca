@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 class Section extends Component {
   render() {
-    const { css } = this.props;
+    const { css, id } = this.props;
     return (
-      <section className={css}>
+      <section className={css} id={id}>
         {this.props.children}
       </section>
     );

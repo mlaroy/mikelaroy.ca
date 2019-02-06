@@ -3,8 +3,8 @@ import CustomLink from '../components/CustomLink'
 import Signature from './signature'
 
 const Header = ({ siteTitle }) => (
-  <header className="w-full container">
-    <div className="flex justify-between h-full px-8">
+  <header className="w-full bg-white">
+    <div className="flex justify-between h-full px-8 container">
       <CustomLink to="/" css="self-center font-serif no-underline text-xl relative">
         <Signature css="site-logo mt-4 w-32 md:w-48" width="180" />
       </CustomLink>
