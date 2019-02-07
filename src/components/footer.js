@@ -26,7 +26,10 @@ class Footer extends Component {
               css="self-center"
               to="https://mikelaroy.ca">
               Michael LaRoy
-            </CustomLink>&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved</p>
+            </CustomLink>&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved
+            <br />
+            Register your domain with <CustomLink external={true} to="https://hover.com/VHvGsXpn">Hover</CustomLink>
+          </p>
           <ul className="flex justify-center flex-row list-reset align-center text-center md:text-left">
           {links.map(link => {
               return (
