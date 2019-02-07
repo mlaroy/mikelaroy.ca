@@ -8,12 +8,12 @@ One of my favourite projects was for my friend Shira, for her award-winning food
 
 ## Initial purpose: make it faster
 
-Shira was initially in need of a solution to the slow speed site was suffering from. It took _ages_ to load, even on fast internet connections. In order to find the right solution, I performed an audit of her site in order to determine what her main issues were. To get an initial baseline, I took a look at Google's Pagespeed Insights tool to see what the situation was:
+Shira was initially in need of a solution to the slow speed her site was suffering from. It took _ages_ to load, even on fast internet connections. In order to find the right solution, I performed an audit of her site in order to determine what her main issues were. To get an initial baseline, I took a look at Google's Pagespeed Insights tool to see what the situation was:
 
 ![google page speed desktop](images/psi-desktop.png)
 ![google page speed mobile](images/psi-mobile.png)
 
-As you can see, we definitely have some issues here. Thankfully, tools like this can reveal a lot of what is going on, though not necessarily why - that would be completely dependent on the configuration settings of everything from your web server, to your content management system or framework, or your front-end code.
+As you can see, we definitely had some issues here. Thankfully, tools like this can reveal a lot of what is going on, though not necessarily why - that would be completely dependent on the configuration settings of everything from your web server, to your content management system or framework, or your front-end code.
 
 I kept digging. [YSlow](http://yslow.org/) was able to tell me the breakdown of the spread of assets being pulled into a given page:
 
