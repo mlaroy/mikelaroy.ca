@@ -119,6 +119,10 @@ class Work extends Component {
                   {work.url !== null && (
                     <CustomLink to={work.url} external={true}>See this project</CustomLink>
                   )}
+                  {'  '}
+                  {work.post !== null && (
+                    <CustomLink to={work.post}>Read the case study</CustomLink>
+                  )}
                 </div>
                 <div className="md:w-2/5 flex flex-col justify-center">
                   <img src={work.image} className="shadow" alt={work.title} />
@@ -139,28 +143,32 @@ const getWorks = () => {
       id: 'ipom',
       title: 'In Pursuit Of More',
       description: 'A consulting project for a fantastic food and lifestyle blog, IPOM was a total rebuild - with a new design, I did both the front-end and the WordPress back-end, greatly improving load times and overall site speed.',
-      url: 'http://inpursuitofmore.com/'
+      url: 'http://inpursuitofmore.com/',
+      post: '/blog/ipom-case-study'
     },
     {
       image: sf,
       id: 'sf',
       title: 'Samuel French',
       description: 'The leader of the front-end team for this project for Engine Digital, I was responsible for the front-end on this e-commerce project for Samuel French. Most notable was the complex Vue integration managing user logins, comment systems, shopping carts, and the vast product catalog.',
-      url: 'https://www.samuelfrench.com/'
+      url: 'https://www.samuelfrench.com/',
+      post: null
     },
     {
       image: credential,
       id: 'credential',
       title: 'Credential Direct',
       description: 'Another Engine Digital project, Credential Direct was a top-to-bottom WordPress build. As the lead developer, I built out the front-end, as well as the WordPress integration, including JavaScript features using the WordPress REST API. Update: it appears to have been acquired, so the site is no longer up so no link is provided. ',
-      url: null
+      url: null,
+      post: null
     },
     {
       image: vct,
       id: 'vct',
       title: 'Vancouver Civic Theatres',
       description: 'Beautifully designed at Engine Digital, this project was front-end only. As the lead developer for this VCT project, I handled all of the usual suspects in the front end: HTML, CSS, and JavaScript. This includes some complex tools like a venue availability calendar and rental estimator.',
-      url: 'https://vancouvercivictheatres.com/'
+      url: 'https://vancouvercivictheatres.com/',
+      post: null
     }
   ];
 }
