@@ -4,6 +4,8 @@
 
 ## 🚀 Quick start
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0b74c8b4-59af-44ea-ab72-012ff47c6bea/deploy-status)](https://app.netlify.com/sites/jovial-nobel-3e7371/deploys)
+
 
 ## Start developing.
 
