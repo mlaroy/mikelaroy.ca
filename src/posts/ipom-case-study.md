@@ -19,11 +19,11 @@ I kept digging. [YSlow](http://yslow.org/) was able to tell me the breakdown of 
 
 ![yslow chart](images/yslow.png)
 
-Right away, I got a good indication of the major source of the speed problem. Look at the number of http requests, sky-high at 95!  And even with a cached page, there are _still 84 requests_.  This is completely bonkers, and overkill for just about any website, nevermind one as straightforward and streamlined as this one.
+Right away, I got a good indication of the major source of the speed problem. Look at the number of http requests, sky-high at 95!  And even with a cached page, there are _still 84 requests_.  This is completely bonkers, and overkill for just about any website, nevermind for one as straightforward and streamlined as this one.
 
 For a typical web page, you might have a handful of requests - the first one will be to fetch the page itself, and then subsequent requests for whatever assets you might need, such as CSS or JavaScrit files, fonts, and images. We're talking maybe a dozen requests at this point, without any sort of optimization effort to lighten the load. The basic rule is that the more requests there are, the longer it takes to load the page.
 
-In this case, it is a staggering number of CSS (36) and JS (22) files that are being requested, and a few more images than are needed. Never mind that the page weight is pushing 10 Mb, which is yet another problem. The source of the weight was fairly easy to determine on one of the blog post pages:
+In this case, it was a staggering number of CSS (36) and JS (22) files that were being requested, and a few more images than were needed. Never mind that the page weight was pushing 10 Mb, which was yet another problem. The source of the weight was fairly easy to determine on one of the blog post pages:
 
 ![yslow chart](images/network.png)
 
