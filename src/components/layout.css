@@ -224,6 +224,7 @@ blockquote p {
   }
 }
 
+/* purgecss ignore */
 .article-body .gatsby-resp-image-wrapper {
   @apply .my-8;
 }
