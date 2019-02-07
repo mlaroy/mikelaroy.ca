@@ -4,11 +4,11 @@ slug: '/ipom-case-study'
 date: '2019-02-06'
 ---
 
-One of my favourite projects was for my friend Shira, whose award-winning food & lifestyle site [In Pursuit of More](http://inpursuitofmore.com/) I had the opportunity to overhaul, and give it a fresh look, and an improved speed and experience. Check it out for awesome vegetarian recipes and overall inspiration for minimalism and simplicity.
+One of my favourite projects was for my friend Shira, for her award-winning food & lifestyle site [In Pursuit of More](http://inpursuitofmore.com/). I had the opportunity to overhaul it and give it a fresh look (designed by Alexa Lupul), with an improved speed and experience. Check it out for awesome vegetarian recipes and overall inspiration for minimalism and simplicity.
 
 ## Initial purpose: make it faster
 
-Shira was initially in search of a fix to the speed issues her site was facing. Before jumping to solutions, I performed an audit of her site in order to determine what her main issues were. To get an initial baseline, I took a look at Google's Pagespeed Insights tool to see what the situation was:
+Shira was initially in need of a solution to the slow speed site was suffering from. It took _ages_ to load, even on fast internet connections. In order to find the right solution, I performed an audit of her site in order to determine what her main issues were. To get an initial baseline, I took a look at Google's Pagespeed Insights tool to see what the situation was:
 
 ![google page speed desktop](images/psi-desktop.png)
 ![google page speed mobile](images/psi-mobile.png)
@@ -19,11 +19,11 @@ I kept digging. [YSlow](http://yslow.org/) was able to tell me the breakdown of 
 
 ![yslow chart](images/yslow.png)
 
-Right away, I got a good indication of the major source of the speed problem. Look at the number of http requests, sky-high at 95!  And even with a cached page, there are _still 84 requests_.  This is completely bonkers and completely overkill for just about any website, nevermind one as straightforward and streamlined as this one.
+Right away, I got a good indication of the major source of the speed problem. Look at the number of http requests, sky-high at 95!  And even with a cached page, there are _still 84 requests_.  This is completely bonkers, and overkill for just about any website, nevermind one as straightforward and streamlined as this one.
 
-For a typical web page, you might have a couple of requests - the first one will be to fetch the page itself, and then whatever assets you might need. Let's assume a CSS file and an JavaScript file, some fonts, and maybe a handful of images. We're talking fewer than 10 requests at this point, without any sort of optimization effort to lighten this load. The basic rule is that the more requests there are, the longer it takes to load the page.
+For a typical web page, you might have a handful of requests - the first one will be to fetch the page itself, and then subsequent requests for whatever assets you might need, such as CSS or JavaScrit files, fonts, and images. We're talking maybe a dozen requests at this point, without any sort of optimization effort to lighten the load. The basic rule is that the more requests there are, the longer it takes to load the page.
 
-In this case, it is a staggering number of CSS (36) and JS (22) files that are being requested, and a few more images than are needed. Never mind that the page weight is push 10 Mb at this point, which is a problem all its own. The source of the weight was fairly easy to determine:
+In this case, it is a staggering number of CSS (36) and JS (22) files that are being requested, and a few more images than are needed. Never mind that the page weight is pushing 10 Mb, which is yet another problem. The source of the weight was fairly easy to determine on one of the blog post pages:
 
 ![yslow chart](images/network.png)
 
@@ -37,9 +37,9 @@ At this point, I needed access to the webserver and, in this case, the WordPress
 
 ## Revised purpose: faster, with a new design
 
-Ultimately what was needed was a complete rebuild of the WordPress theme. The one being employed was a one-size-fits-all kind of theme, which certainly has its uses. For the novice site admin, this provides virtually limitless possibilities for assembling your website. Unfortunately, it comes with boat loads of features and required plugins like image galleries, and other bells and whistles - not being used anywhere in this site. And yet, all of the code was being loaded anyway.
+Ultimately what was needed was a complete rebuild of the WordPress theme. The exsting theme was a one-size-fits-all kind of theme, which does have its uses. For the novice site administrator, it has the potential to provide virtually limitless possibilities for assembling and customizing your website. Consequently, it unfortunately comes with boat-loads of extra features and plugins - all the bells and whistles - none of which were being used anywhere in this site. And yet, all of the code was being loaded anyway.
 
-Thankfully, this provided an excellent occasion for a new design for the site. Knowing the necessary features required to keep the site up to snuff, and armed with fresh designs, I went to work.
+Thankfully, a new design in the works provided an excellent occasion for a new build for the site. Knowing the necessary features required to keep the site up to snuff, and armed with fresh designs, I went to work.
 
 Since I had the opportunity to build a theme from the ground-up, I was able to get rid of virutally all of the extra plugins that added to the bloat of the site, and write the code to customize it to the new design.  Gone are the visual page builders and contact form plugins, as well as WP's own bloaty Jetpack. My new theme required a single plugin - Advanced Custom Fields (ACF), which enabled a customize authoring experience for the custom home page template, among other things.
 
@@ -61,7 +61,9 @@ There were a few server-side things that I unfortunately couldn't control, since
 
 ![new updated google page speed score: 94%](images/after.png)
 
-According to [Webspeedtest](https://www.webpagetest.org), our new completed document size is a mere 330 KB and 7 requests (plus images), down from **almost 10 MB** and **95 requests**.  Mission accomplished!  The site loads incredibly fast, as the time to first interaction is 1.020s, and to complete at 3.2s. Not to mention a great, new and improved look.
+Scores over 85-90% are considered quite good - so landing at 94% is a fantastic grade, especially compared to the previous 28%, and 0% for mobile.
+
+According to [Webpagetest](https://www.webpagetest.org), our new completed document size is a mere 330 KB and 7 requests (plus images), down from **almost 10 MB** and **95 requests**.  Mission accomplished!  The site loads incredibly fast, as the time to first interaction is 1.020s, and to complete at 3.2s on the image-heavy home page, down from over 17 seconds on the less image-heavy post page.
 
 Thanks to Shira for enlisting my services to build her a blazing fast new site. This was a fun project with interesting challenges, and I couldn't be more pleased with the result.
 
