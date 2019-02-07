@@ -6,7 +6,7 @@ date: '2019-02-06'
 
 One of my favourite projects was for my friend Shira, whose award-winning food & lifestyle site [In Pursuit of More](http://inpursuitofmore.com/) I had the opportunity to overhaul, and give it a fresh look, and an improved speed and experience. Check it out for awesome vegetarian recipes and overall inspiration for minimalism and simplicity.
 
-## Initial Purpose: Make it faster
+## Initial purpose: make it faster
 
 Shira was initially in search of a fix to the speed issues her site was facing. Before jumping to solutions, I performed an audit of her site in order to determine what her main issues were. To get an initial baseline, I took a look at Google's Pagespeed Insights tool to see what the situation was:
 
