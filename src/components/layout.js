@@ -33,6 +33,7 @@ const Layout = ({ children, description, title }) => (
               title={data.site.siteMetadata.title}
               meta={[
                 { name: 'description', content: metaDescription },
+                { name: 'google-site-verification', content: process.env.GATSBY_GOOGLE_VERIFICATION_ID },
                 { name: 'keywords', content: data.site.siteMetadata.keywords },
                 {
                   property: `og:title`,
