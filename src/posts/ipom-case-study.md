@@ -23,7 +23,7 @@ Right away, I got a good indication of the major source of the speed problem. Lo
 
 For a typical web page, you might have a handful of requests - the first one will be to fetch the page itself, and then subsequent requests for whatever assets you might need, such as CSS or JavaScrit files, fonts, and images. We're talking maybe a dozen requests at this point, without any sort of optimization effort to lighten the load. The basic rule is that the more requests there are, the longer it takes to load the page.
 
-In this case, a staggering number of CSS (36) and JS (22) files that was being requested, and a few more images than were needed. Never mind that the page weight was pushing 10 Mb, which was yet another problem. The source of the weight was fairly easy to determine on one of the blog post pages:
+In this case, a staggering number of CSS (36) and JS (22) files was being requested, as well as a few more images than were were actually needed. Never mind that the page weight was pushing 10 Mb, which was yet another problem. The source of the weight was fairly easy to determine on one of the blog post pages:
 
 ![yslow chart](images/network.png)
 
