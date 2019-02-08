@@ -22,7 +22,18 @@ class postLayout extends Component {
         <Helmet
           title={`${title} | ${site.siteMetadata.title}`}
           meta={[
-            { name: 'description', content: excerpt }
+            {
+              name: 'description',
+              content: excerpt
+            },
+            {
+              property: `og:title`,
+              content: `${title} | ${site.siteMetadata.title}`
+            },
+            {
+              property: `og:description`,
+              content: `${excerpt}`,
+            },
           ]}
         >
         </Helmet>
