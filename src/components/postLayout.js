@@ -15,7 +15,7 @@ class postLayout extends Component {
   render() {
     const { markdownRemark, site } = this.props.data;
     const { html, timeToRead, excerpt } = markdownRemark;
-    const { date, title } = markdownRemark.frontmatter
+    const { date, title, slug } = markdownRemark.frontmatter
 
     return (
       <Layout>
@@ -33,7 +33,11 @@ class postLayout extends Component {
             {
               property: `og:description`,
               content: `${excerpt}`,
-            },
+            }
+            // {
+            //   name: `twitter:image`,
+            //   content: `${site.siteMetadata.url}${slug || ''}twitter-card.jpg`
+            // }
           ]}
         >
         </Helmet>
@@ -64,7 +68,8 @@ export const query = graphql`
       siteMetadata {
         title
         description
-        keywords
+        keywords,
+        url
       }
     }
     markdownRemark(frontmatter: {

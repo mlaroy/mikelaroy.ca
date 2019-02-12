@@ -48,6 +48,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          // 'gatsby-remark-social-cards',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -55,6 +56,12 @@ module.exports = {
               linkImagesToOriginal: false
             },
           },
+          {
+            resolve: "@weknow/gatsby-remark-twitter",
+            options: {
+              debug: true
+            }
+          }
         ],
       },
     },

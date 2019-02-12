@@ -17,7 +17,8 @@ const Layout = ({ children, description, title }) => (
           siteMetadata {
             title
             description
-            keywords
+            keywords,
+            url
           }
         }
       }
@@ -27,6 +28,7 @@ const Layout = ({ children, description, title }) => (
           description || data.site.siteMetadata.description
       const siteTitle =
           title || data.site.siteMetadata.title
+      const url = data.site.siteMetadata.url
       return (
           <>
             <Helmet
@@ -45,7 +47,7 @@ const Layout = ({ children, description, title }) => (
                 },
                 {
                   property: `og:url`,
-                  content: data.site.siteMetadata.url,
+                  content: url,
                 },
                 {
                   property: `og:image:url`,
@@ -90,7 +92,7 @@ const Layout = ({ children, description, title }) => (
                 {
                   name: `twitter:description`,
                   content: metaDescription,
-                },
+                }
               ]}
             >
               <html lang="en" />

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@weknow/gatsby-remark-twitter": "^0.2.0",
     "babel-plugin-styled-components": "^1.8.0",
     "babel-plugin-tailwind-components": "^0.5.10",
     "gatsby": "^2.0.33",
@@ -20,6 +21,7 @@
     "gatsby-plugin-styled-components": "^3.0.3",
     "gatsby-plugin-tailwindcss": "^1.0.3",
     "gatsby-remark-images": "^3.0.3",
+    "gatsby-remark-social-cards": "^0.4.1",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-remark": "^2.1.12",
     "gatsby-transformer-sharp": "^2.1.4",
