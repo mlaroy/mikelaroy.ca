@@ -1,7 +1,7 @@
 ---
 title: 'Using Vuex Stores with Vue'
 slug: '/using-vuex-stores-with-vue'
-date: '2019-02-12'
+date: '2019-02-13'
 ---
 
 Managing the state of a large Vue app (or React app, or any kind of app, really) can be a bit of a bear. This is true particularly if you have a lot of different piece of data to manage - so I certainly recommend breaking your store up into modules, so as to keep better organized in your code. Here's how I might implement Vuex to manage the state of my Vue app. The way I implemented Vue on [Samuel French](https://samuelfrench.com/) for managing searches and shopping cart data is very similar to what you will see here.
