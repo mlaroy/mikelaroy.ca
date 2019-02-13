@@ -230,9 +230,16 @@ blockquote p {
 }
 
 code {
-  background: #fafafa;
-  padding: 0 3px;
-  font-size: 90%;
+  @apply .px-2 .py-1 .text-sm .bg-grey-lighter .rounded;
 }
+
+pre {
+  /* @apply .my-8 .p-8 .text-sm .bg-grey-lighter .rounded .block; */
+}
+
+.gatsby-highlight {
+  @apply .my-8;
+}
+
 
 @tailwind utilities;

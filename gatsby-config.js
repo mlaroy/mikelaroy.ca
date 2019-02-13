@@ -61,6 +61,12 @@ module.exports = {
             options: {
               debug: true
             }
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              noInlineHighlight: true,
+            }
           }
         ],
       },
