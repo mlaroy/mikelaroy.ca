@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: 'Michael LaRoy',
@@ -78,56 +80,15 @@ module.exports = {
         printRejected: true, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
-        ignore: 'node_modules/prismjs/themes/prism-okaidia.css',
+        develop: true,
+        debug: true,
+        // ignore: '/node_modules/prismjs/themes/prism-okaidia.css',
+        content: [
+          path.join(process.cwd(), 'src/**/!(*.d).{ts,js,jsx,tsx}'),
+          path.join(process.cwd(), 'node_modules/prismjs/themes/prism-okaidia.css')
+        ],
         whitelist: [
           '.article-body .gatsby-resp-image-wrapper',
-          '.gatsby-highlight',
-          '.language-js',
-          'pre',
-          'code',
-          '.token',
-          '.token.comment',
-          '.token.prolog',
-          '.token.doctype',
-          '.token.cdata',
-          '.token.punctuation',
-          '.namespace',
-          '.token.property',
-          '.token.tag',
-          '.token.constant',
-          '.token.symbol',
-          '.token.deleted',
-          '.token.boolean',
-          '.token.number',
-          '.token.selector',
-          '.token.attr-name',
-          '.token.string',
-          '.token.char',
-          '.token.builtin',
-          '.token.inserted',
-          '.token.operator',
-          '.token.entity',
-          '.token.url',
-          '.language-css .token.string',
-          '.style .token.string',
-          '.token.variable',
-          '.token.atrule',
-          '.token.attr-value',
-          '.token.function',
-          '.token.class-name',
-          '.token.keyword',
-          '.token.regex',
-          '.token.important',
-          '.token.important',
-          '.token.bold',
-          '.token.italic',
-          '.token.entity',
-          '.keyword',
-          '.operator',
-          '.punctuation',
-          '.class-name',
-          '.comment',
-          '.string'
         ], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
