@@ -76,7 +76,7 @@ export const getters = {
     return state.searchResults.length;
   },
   filteredResults(state) {
-    return state.searchResults.filter(result => !result.isAllowed)
+    return state.searchResults.filter(result => result.isAllowed)
   },
   showResults(state, getters) {
     return state.isFetching && !state.hasError && getters.numberResults > 0
