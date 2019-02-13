@@ -78,6 +78,7 @@ module.exports = {
         printRejected: true, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
+        ignore: 'node_modules/prismjs/themes/prism-okaidia.css',
         whitelist: [
           '.article-body .gatsby-resp-image-wrapper',
           '.gatsby-highlight',

@@ -237,6 +237,7 @@ pre {
   /* @apply .my-8 .p-8 .text-sm .bg-grey-lighter .rounded .block; */
 }
 
+/* purgecss ignore */
 .gatsby-highlight {
   @apply .my-8;
 }
