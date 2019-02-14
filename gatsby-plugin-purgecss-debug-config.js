@@ -108,14 +108,7 @@
                   ignore: [],
                   tailwind: true,
                   develop: true,
-                  whitelist: 
-                   [ 'html',
-                     'body',
-                     '.article-body .gatsby-resp-image-wrapper',
-                     '.gatsby-highlight',
-                     '.language-js',
-                     'pre',
-                     'code' ] } } ] } ] },
+                  whitelist: [ 'html', 'body', '.article-body .gatsby-resp-image-wrapper' ] } } ] } ] },
   plugins: 
    [ IgnorePlugin {
        options: { resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ },
