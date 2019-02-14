@@ -231,15 +231,21 @@ blockquote p {
 
 code {
   @apply .px-2 .py-1 .text-sm .bg-grey-lighter .rounded;
+  max-width: 100%;
 }
 
 pre {
+  max-width: 100%;
+  overflow: hidden;
   /* @apply .my-8 .p-8 .text-sm .bg-grey-lighter .rounded .block; */
 }
 
 /* purgecss ignore */
 .gatsby-highlight {
-  @apply .my-8;
+  margin: 0;
+  @apply .my-8 .block;
+  max-width: 100%;
+  max-width: 85vw;
 }
 
 
