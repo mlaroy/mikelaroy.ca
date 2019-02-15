@@ -27,7 +27,7 @@ const Success = props => (
         </h1>
         <hr/>
         <p className="text-sm mb-0 pt-12 md:absolute md:mr-4 pin-t pin-r">
-          <a href="https://mikelaroy.ca/rss.xml">RSS {getIcon('rss', '10')}</a>
+          <a href="https://mikelaroy.ca/rss.xml" className="text-blue">RSS {getIcon('rss', '10')}</a>
         </p>
       </Narrow>
     </Section>
