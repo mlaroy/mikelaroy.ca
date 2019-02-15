@@ -71,6 +71,11 @@ const footerLinks = () => {
       name: 'Twitter',
       url: 'https://twitter.com/laroymike',
       icon: 'twitter'
+    },
+    {
+      name: 'RSS',
+      url: 'https://mikelaroy.ca/rss.xml',
+      icon: 'rss'
     }
   ]
 }
