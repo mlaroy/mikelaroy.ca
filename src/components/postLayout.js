@@ -55,11 +55,11 @@ class postLayout extends Component {
             <div className="my-8">
               <Signature />
             </div>
-            {/* <Share
+            <Share
               url={this.props.location}
               title={title}
               description={excerpt}
-            /> */}
+            />
           </Narrow>
         </Section>
       </Layout>
