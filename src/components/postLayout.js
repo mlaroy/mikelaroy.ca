@@ -5,6 +5,7 @@ import Layout from './layout'
 import Section from './Section'
 import Signature from './signature'
 import Helmet from 'react-helmet'
+import Share from './share'
 
 const Narrow = styled.div`
   max-width: 960px;
@@ -51,12 +52,16 @@ class postLayout extends Component {
             <div className="article-body" dangerouslySetInnerHTML={{
               __html: html
             }}></div>
-            <div className="mt-8">
+            <div className="my-8">
               <Signature />
             </div>
+            {/* <Share
+              url={this.props.location}
+              title={title}
+              description={excerpt}
+            /> */}
           </Narrow>
         </Section>
-
       </Layout>
     );
   }
