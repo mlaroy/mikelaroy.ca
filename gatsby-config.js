@@ -6,7 +6,7 @@ module.exports = {
     author: 'Michael LaRoy',
     url: 'https://mikelaroy.ca',
     description: 'Front-End web development consultant in Abbotsford, BC.',
-    keywords: 'JavaScript, React, Vue, CSS, WordPress, Gatsby, PHP, Laravel, Tailwind, Node, Abbotsford, Fraser Valley'
+    keywords: 'JavaScript, React, Vue, CSS, WordPress, Gatsby, PHP, Laravel, Statamic, Tailwind, Node, Abbotsford, Fraser Valley'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
