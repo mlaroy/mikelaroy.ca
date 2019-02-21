@@ -20,7 +20,7 @@ const Narrow = styled.div`
 `
 
 const Hero = styled.div`
-  ${tw`py-8 text-center mb-8`}
+  ${tw`py-8 md:text-center mb-8`}
 `
 
 class IndexPage extends Component {
@@ -45,11 +45,11 @@ class IndexPage extends Component {
     return (
       <Layout>
         <Hero>
-          <h2 className="text-2xl md:text-6xl px-8 md:px-32 md:pt-32 md:pb-8  leading-tight">
-            Howdy! I'm Michael LaRoy, <br />
-            a web development consultant in <br />
+          <h2 className="text-2xl md:text-4xl lg:text-6xl px-8 md:px-32 md:pt-32 md:pb-8  leading-tight">
+            Howdy! I'm Michael LaRoy, <br class="hidden md:block" />
+            a web development consultant in <br class="hidden md:block"  />
             Abbotsford, British Columbia
-            <span className="text-sm block font-normal text-center">(that's near Vancouver)</span>
+            <span className="text-sm block font-normal">(that's near Vancouver)</span>
           </h2>
           <CustomLink css="button ml-auto mr-auto" to="/blog">Read some of my thoughts &rarr;</CustomLink>
         </Hero>
