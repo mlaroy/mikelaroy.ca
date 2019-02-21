@@ -62,7 +62,7 @@ class IndexPage extends Component {
                   <img src={portrait_square} alt="Michael LaRoy" className="block shadow-lg rounded"/>
                 </picture>
               </div>
-              <div className="w-full sm:w-2/3 mt-16 md:mt-0 sm:ml-16 md:ml-32 flex flex-col justify-center">
+              <div className="w-full sm:w-2/3 mt-16 sm:mt-0 sm:ml-16 md:ml-32 flex flex-col justify-center">
                 <h3 className="text-2xl md:text-4xl mb-16 section-heading section-heading--inverted"> Nice to meet you</h3>
                 <p className="text-md md:text-xl mb-4">
                   I love hearing from new people and potential partners, so if you are looking for a reliable and creative developer,
