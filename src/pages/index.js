@@ -10,11 +10,12 @@ import LatestPost from '../components/latestPost'
 import BlogTeaser from '../components/BlogTeaser'
 import Work from '../components/Work'
 import CustomLink from '../components/CustomLink';
+import portrait from '../images/portrait.jpg';
 
 const Narrow = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  ${tw`px-8 py-16 h-full flex flex-col justify-center`};
+  ${tw`px-8 py-24 h-full flex flex-col justify-center`};
 `
 
 const Hero = styled.div`
@@ -51,7 +52,26 @@ class IndexPage extends Component {
           </h2>
           <CustomLink css="button ml-auto mr-auto" to="/blog">Read some of my thoughts &rarr;</CustomLink>
         </Hero>
-        <Section css="bg-grey-lighter">
+        <Section css="bg-blue text-white">
+          <Narrow>
+            <div className="flex flex-col sm:flex-row">
+              <div className="w-full sm:w-1/3 max-w-xs">
+                <img src={portrait} alt="Michael LaRoy" className="block shadow-lg rounded"/>
+              </div>
+              <div className="w-full sm:w-2/3 mt-16 md:mt-0 sm:ml-16 md:ml-32 flex flex-col justify-center">
+                <h3 className="text-2xl md:text-4xl mb-16 section-heading section-heading--inverted"> Nice to meet you</h3>
+                <p className="text-md md:text-xl mb-4">
+                  I love hearing from new people and potential partners, so if you are looking for a reliable and creative developer,
+                  please get in touch below.
+                </p>
+                <p className="text-md md:text-xl">
+                  You can also find me over on <a href="https://twitter.com/laroymike" className="text-blue hover:text-orange transition">twitter</a>
+                </p>
+              </div>
+            </div>
+          </Narrow>
+        </Section>
+        <Section css="bg-white">
           <Narrow>
             <Work />
           </Narrow>
@@ -68,7 +88,7 @@ class IndexPage extends Component {
             <p className="text-base md:text-xl mt-4 mb-4">
               I aim to make things easy for you, the client. While the ecosystem of web technologies is vast and
               complex, that doesn't mean it needs to be hard for you. Ultimately you shoudn't need to worry
-              whether I'm using React or Vue, JavaScript or PHP, or WordPress or whatever else to get you
+              whether I'm using React or Vue, JavaScript or PHP, or WordPress or Laravel, or whatever else to get you
               where you need to go - at the end of the day, you just need it to work.
             </p>
             <p className="text-base md:text-xl mt-4 mb-4">
