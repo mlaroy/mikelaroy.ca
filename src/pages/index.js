@@ -11,6 +11,7 @@ import BlogTeaser from '../components/BlogTeaser'
 import Work from '../components/Work'
 import CustomLink from '../components/CustomLink';
 import portrait from '../images/portrait.jpg';
+import portrait_square from '../images/portrait-square.jpg';
 
 const Narrow = styled.div`
   max-width: 960px;
@@ -55,8 +56,11 @@ class IndexPage extends Component {
         <Section css="bg-blue text-white">
           <Narrow>
             <div className="flex flex-col sm:flex-row">
-              <div className="w-full sm:w-1/3 max-w-xs">
-                <img src={portrait} alt="Michael LaRoy" className="block shadow-lg rounded"/>
+              <div className="w-full sm:w-1/3 max-w-xs flex flex-col justify-center">
+                <picture>
+                  <source srcSet={portrait} media="(min-width: 768px)" />
+                  <img src={portrait_square} alt="Michael LaRoy" className="block shadow-lg rounded"/>
+                </picture>
               </div>
               <div className="w-full sm:w-2/3 mt-16 md:mt-0 sm:ml-16 md:ml-32 flex flex-col justify-center">
                 <h3 className="text-2xl md:text-4xl mb-16 section-heading section-heading--inverted"> Nice to meet you</h3>
