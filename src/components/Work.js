@@ -125,7 +125,7 @@ class Work extends Component {
                   )}
                 </div>
                 <div className="md:w-2/5 flex flex-col justify-center">
-                  <img src={work.image} className="shadow" alt={work.title} />
+                  <img src={work.image} className="shadow-lg" alt={work.title} />
                 </div>
               </div>
             );
