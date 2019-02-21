@@ -45,13 +45,15 @@ class IndexPage extends Component {
     return (
       <Layout>
         <Hero>
-          <h2 className="text-2xl md:text-4xl lg:text-6xl px-8 md:px-32 md:pt-32 md:pb-8  leading-tight">
-            Howdy! I'm Michael LaRoy, <br class="hidden md:block" />
-            a web development consultant in <br class="hidden md:block"  />
-            Abbotsford, British Columbia
-            <span className="text-sm block font-normal">(that's near Vancouver)</span>
-          </h2>
-          <CustomLink css="button ml-auto mr-auto" to="/blog">Read some of my thoughts &rarr;</CustomLink>
+          <div className="px-8 py-16 md:px-32 md:pt-32 md:pb-8">
+            <h2 className="text-2xl md:text-4xl lg:text-6xl leading-tight">
+              Howdy! I'm Michael LaRoy, <br class="hidden md:block" />
+              a web development consultant in <br class="hidden md:block"  />
+              Abbotsford, British Columbia
+              <span className="text-sm block font-normal">(that's near Vancouver)</span>
+            </h2>
+            <CustomLink css="button mx-auto" to="/blog">Read some of my thoughts &rarr;</CustomLink>
+          </div>
         </Hero>
         <Section css="bg-blue text-white">
           <Narrow>
