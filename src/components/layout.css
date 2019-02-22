@@ -252,5 +252,20 @@ pre {
   max-width: 85vw;
 }
 
+@keyframes fadeIn {
+  from  {
+    opacity: 0;
+  }
+
+  to  {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 0.8s;
+}
+
 
 @tailwind utilities;
