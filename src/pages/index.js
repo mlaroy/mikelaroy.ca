@@ -47,7 +47,7 @@ class IndexPage extends Component {
         <Hero>
           <div className="px-8 py-12 sm:py-16 md:px-32 md:pt-32 md:pb-8">
             <h2 className="text-2xl md:text-4xl lg:text-6xl leading-tight">
-              Howdy! I'm Michael LaRoy, <br class="hidden md:block" />
+              Howdy! I'm <span className="text-blue">Michael LaRoy</span>, <br class="hidden md:block" />
               a web development consultant in <br class="hidden md:block"  />
               Abbotsford, British Columbia
               <span className="text-sm block font-normal">(that's near Vancouver)</span>
