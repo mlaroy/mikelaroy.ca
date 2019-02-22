@@ -100,7 +100,7 @@ class Work extends Component {
             )
           })}
         </div>
-        <div role="alert" aria-live="polite" className="mt-8 p-12 shadow">
+        <div role="alert" aria-live="polite" className="mt-8 p-8 md:p-12 shadow">
           {works.map( work => {
             const isActive = this.checkActive(work, activeIndex);
             const activeClass = 'flex flex-col md:flex-row';
