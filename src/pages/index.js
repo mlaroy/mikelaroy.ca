@@ -45,14 +45,14 @@ class IndexPage extends Component {
     return (
       <Layout>
         <Hero>
-          <div className="px-8 py-16 md:px-32 md:pt-32 md:pb-8">
+          <div className="px-8 py-12 sm:py-16 md:px-32 md:pt-32 md:pb-8">
             <h2 className="text-2xl md:text-4xl lg:text-6xl leading-tight">
               Howdy! I'm Michael LaRoy, <br class="hidden md:block" />
               a web development consultant in <br class="hidden md:block"  />
               Abbotsford, British Columbia
               <span className="text-sm block font-normal">(that's near Vancouver)</span>
             </h2>
-            <CustomLink css="button mx-auto" to="/blog">Read some of my thoughts &rarr;</CustomLink>
+            <CustomLink css="button mx-auto text-blue-dark mt-16" to="/blog">Read some of my thoughts &rarr;</CustomLink>
           </div>
         </Hero>
         <Section css="bg-blue text-white">
@@ -65,7 +65,7 @@ class IndexPage extends Component {
                 </picture>
               </div>
               <div className="w-full sm:w-2/3 mt-16 sm:mt-0 sm:ml-16 md:ml-32 flex flex-col justify-center">
-                <h3 className="text-2xl md:text-4xl mb-16 section-heading section-heading--inverted"> Nice to meet you</h3>
+                <h3 className="text-2xl md:text-4xl mb-16 section-heading section-heading--inverted text-shadow"> Nice to meet you</h3>
                 <p className="text-md md:text-xl mb-4">
                   I love hearing from new people and potential partners, so if you are looking for a reliable and creative developer,
                   please get in touch below. I love to build in Gatsby, WordPress, Statamic, and other platforms.
@@ -120,7 +120,7 @@ class IndexPage extends Component {
 const splitLeft = () => {
   return (
     <Fragment>
-      <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted">Latest thoughts</h3>
+      <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted text-shadow">Latest thoughts</h3>
       <LatestPost />
     </Fragment>
   );
@@ -129,7 +129,7 @@ const splitLeft = () => {
 const splitRight = () => {
   return (
     <aside>
-      <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted">Nerd Zone</h3>
+      <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted text-shadow">Nerd Zone</h3>
       <p className="text-base md:text-xl mb-4">
         This site was designed in the browser with React/Gatsby, and Tailwind CSS.
       </p>
