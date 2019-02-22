@@ -114,7 +114,7 @@ class Work extends Component {
                 className={isActive ? activeClass : ''}
                 id={work.id}>
                 <div className="md:w-3/5 pb-4 md:pr-8" >
-                  <h3 className="text-xl md:text-2xl mb-16 section--heading">{work.title}</h3>
+                  <h3 className="text-xl md:text-2xl mb-16 section-heading">{work.title}</h3>
                   <p className="mb-4">{work.description}</p>
                   {work.url !== null && (
                     <CustomLink to={work.url} external={true}>See this project</CustomLink>
