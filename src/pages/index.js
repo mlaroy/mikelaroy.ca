@@ -103,7 +103,7 @@ class IndexPage extends Component {
               work together to build something great!
             </p>
             <p className="text-base md:text-xl mt-4 mb-4">
-              Looking for a resume? See me on <a href="https://linkedin.com/in/laroymike">LinkedIn</a>
+              Looking for a resume? See me on <a href="https://linkedin.com/in/laroymike" className="text-blue hover:text-orange transition">LinkedIn</a>
             </p>
           </Narrow>
         </Section>
