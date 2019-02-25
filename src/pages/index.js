@@ -98,9 +98,12 @@ class IndexPage extends Component {
               where you need to go - at the end of the day, you just need it to work.
             </p>
             <p className="text-base md:text-xl mt-4 mb-4">
-              My experience working in agencies, with clients large and small has given me the tools I need
+              I work typically as a front-end developer - my experience working in agencies, with clients large and small has given me the tools I need
               to help you as a consultant with your project. I'd love to hear from you and see how we can
               work together to build something great!
+            </p>
+            <p className="text-base md:text-xl mt-4 mb-4">
+              Looking for a resume? See me on <a href="https://linkedin.com/in/laroymike">LinkedIn</a>
             </p>
           </Narrow>
         </Section>
