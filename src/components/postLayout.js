@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { DiscussionEmbed } from 'disqus-react';
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from './layout'
@@ -17,6 +18,11 @@ class postLayout extends Component {
     const { markdownRemark, site } = this.props.data;
     const { html, timeToRead, excerpt } = markdownRemark;
     const { date, title, slug } = markdownRemark.frontmatter
+    const disqusShortname = 'mikelaroy';
+    const disqusConfig = {
+      identifier: slug,
+      title: title,
+    };
 
     return (
       <Layout>
@@ -60,6 +66,9 @@ class postLayout extends Component {
               title={title}
               description={excerpt}
             />
+            <div className="my-8">
+              <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+            </div>
           </Narrow>
         </Section>
       </Layout>
