@@ -10,7 +10,7 @@ If you have ever wanted to learn how to build a website for the first time, this
 
 Initially, I considered giving some extra background information, such as the history of the internet, what HTTP is and how it works, etc. but the plan here is to get you started with just enough information to start building something simple. You can find a lot of background information in many places, like [wikipedia](https://en.wikipedia.org/wiki/Website) for example.
 
-In short, this will be some practial steps to follow to get your first website up and running using basic, but modern approaches.
+In short, this will be some practical steps to follow to get your first website up and running using basic, but modern approaches.
 
 ## Let's begin: What is a website?
 
