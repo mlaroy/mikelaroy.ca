@@ -1,24 +1,24 @@
 ---
 title: 'Basic Web Development - Part 1'
 slug: '/basic-web-development-part-1'
-date: '2019-02-28'
+date: '2019-02-26'
 ---
 
 If you have ever wanted to learn how to build a website for the first time, this series is for you. My intention here is to introduce some of the basic topics of building a web page, including some of the languages, tools, techniques, and knowledge required to build your first site.
 
 ## What this is - and isn't
 
-Initially, I considered giving some extra background information, such as the history of the internet, what HTTP is and how it works, etc. but the plan here is to just get you started with just enough information to start building something. You can find a lot of background information in many places, like [wikipedia](https://en.wikipedia.org/wiki/Website) for example.
+Initially, I considered giving some extra background information, such as the history of the internet, what HTTP is and how it works, etc. but the plan here is to get you started with just enough information to start building something simple. You can find a lot of background information in many places, like [wikipedia](https://en.wikipedia.org/wiki/Website) for example.
 
 In short, this will be some practial steps to follow to get your first website up and running using basic, but modern approaches.
 
-## What is a website?
+## Let's begin: What is a website?
 
 At its core, a website in its simplest form is a _document_, like a book or a letter. It can contain text, pictures, and more, and has the ability to connect to other documents through _hypertext_ - or in everyday parlance, a link. This is the **HT** in HTML, and is what gives a website its power. The way we access our document is through a program called a browser. The browser is specially designed to understand our document, and handle the links to other websites.
 
 On top of being a document, a website can also be enhanced to be interactive, and behave like an application - many services use this approach, such as your banking institution or online stores. The browser is the native environment where this interactivity can take place.
 
-Utimately, our document needs to live on a computer that is accessible from the internet - we refer to this as a _server_. Essentially, your document exists on a server that is connected to the internet. Luckily, web browsers can also handle files that are just on your computer, and not yet on the internet - this is very handy when it comes to creating our website, before showing it to the world.
+Utimately, our document needs to live on a computer that is accessible from the internet - we refer to this as a _server_. Essentially, your document exists on a server that is connected to the internet. Luckily, web browsers can also handle files that are just on your computer, and not yet on the internet - this is very handy when it comes to creating our website, before showing it to the world.  Keep in mind that your computer is not acting like a web server, we are merely accessing the computer's file system. More on this topic in a future post.
 
 ## Getting started
 
@@ -43,7 +43,7 @@ Using our text editor of choice, let's create a new file, and call it `index.htm
 Hello World!
 ```
 
-Next, we can see this in a browser by dragging the file from a Finder window right into an open browser windo (if you're on a Mac), or by right-clicking the file and select `Open With` and choose a browser, like Firefox or Chrome.
+Next, we can see this in a browser by dragging the file from a Finder window right into an open browser window (if you're on a Mac), or by right-clicking the file and select `Open With` and choose a browser, like Firefox or Chrome.
 
 ![finder menu: open file in browser](images/open-in-browser.png)
 
@@ -51,9 +51,7 @@ Then, we should see `Hello World!` in our browser window!
 
 ![hello world in web browser](images/hello-world.png)
 
-And there we have it - a website in its most basic form: just text!
-
-Next, we will add a little more to our index file, so that the browser can do a little bit more work for us.
+And there we have it - a website in its most basic form: just text content. Next, we will add a little more to our index file, so that the browser can do a little bit more work for us.
 
 ## Writing markup
 
@@ -65,7 +63,7 @@ Tags work by declaring the start and end of our special piece of information. Fo
 <p>I am a paragraph of text.</p>
 ```
 
-By default, browsers have special formatting for such semantic markup. Let's see by add a few more things to our basic `index.html` file:
+By default, browsers have special formatting for such semantic markup. Let's see what that means by adding a few more things to our basic `index.html` file:
 
 ```html
 <h1>I am a level 1 heading</h1>
@@ -114,6 +112,66 @@ Next is the `head` tag. Here is where we can put our extra information about the
 
 The last part here is the `title` tag. Notice in our browser, the tab at the top has changed from showing the file path of our `index.html` file to showing the contents of this tag, which says `Basic Web Development`.  Not only does it make our browser tab nicer, this is also a semantic feature that tells us what our document is called, is seen by assistive technologies, as well as being used by search engines, which will display it in a search result.
 
-Finally, the `body` tag is where we place any actual content of our document. All of our headings, paragraphs, and lists  (like we first saw above) should go inside the body tag.
+Finally, the `body` tag is where we place any actual content of our document. All of our headings, paragraphs, and lists (like we first saw above) and more should go inside the body tag.
 
-## Next time: Part 2 - more tags, and adding styles
+## Wrapping it up
+
+Finally, with our document type declared, and content added inside our `body` tag, we have the foundation of our basic HTML webpage. Let's finish off our `index.html` file with a few more HTML elements that you can go and read about elsewhere:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web Development</title>
+  </head>
+  <body>
+    <h1>Basic Web Development</h1>
+    <p>How about a horizontal rule? Here's one:</p>
+    <hr>
+    <p>Adding markup is easy! Here's a list of fruit:</p>
+    <ul>
+      <li>Apple 🍏</li>
+      <li>Orange 🍊</li>
+      <li>Banana 🍌</li>
+    </ul>
+    <hr>
+    <p>Now let's try it in a table:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Fruit</th>
+          <th>Emoji</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Apple</td>
+          <td>🍏</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>🍊</td>
+        </tr>
+        <tr>
+          <td>Banana</td>
+          <td>🍌</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+```
+![html document complete ](images/html-complete.png)
+
+There are dozens of HTML elements available, and each has its own specific purpose and uses. Although we have only touched on a few of them here, we have already built a foundation for building a solid website.
+
+So far we have:
+* downloaded a text editor
+* learned about `.html` files
+* used tags to mark up our html file with paragraphs, lists, headings, and tables
+* added a title to the `head` of our document
+* viewed our HTML page in a browser
+
+**Next time: Part 2 - Markup cont'd, and Adding Styles**
