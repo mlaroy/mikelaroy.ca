@@ -230,7 +230,11 @@ blockquote p {
 
 /* purgecss ignore */
 .article-body .gatsby-resp-image-wrapper {
-  @apply .my-8;
+  @apply .my-8 .shadow-md;
+}
+
+.article-body .gatsby-resp-image-wrapper img {
+  @apply .rounded;
 }
 
 code {
