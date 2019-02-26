@@ -14,7 +14,7 @@ In short, this will be some practial steps to follow to get your first website u
 
 ## What is a website?
 
-At its core, a website in its simplest form is a _document_, like a book or a letter. It can contain text, pictures, and more, and has the ability to connect to other documents through _hypertext_ - in everyday parlance, a link. This is the H in HTML, and is what gives a website its power. The way we access our document is through a program called a browser. The browser is specially designed to understand our document, and handle the links to other websites.
+At its core, a website in its simplest form is a _document_, like a book or a letter. It can contain text, pictures, and more, and has the ability to connect to other documents through _hypertext_ - or in everyday parlance, a link. This is the **HT** in HTML, and is what gives a website its power. The way we access our document is through a program called a browser. The browser is specially designed to understand our document, and handle the links to other websites.
 
 On top of being a document, a website can also be enhanced to be interactive, and behave like an application - many services use this approach, such as your banking institution or online stores. The browser is the native environment where this interactivity can take place.
 
@@ -47,23 +47,25 @@ Next, we can see this in a browser by dragging the file from a Finder window rig
 
 ![finder menu: open file in browser](images/open-in-browser.png)
 
-Then, we should see `Hello World!` in your browser window!
+Then, we should see `Hello World!` in our browser window!
 
 ![hello world in web browser](images/hello-world.png)
 
-And there we have it - a website in its most basic form: just text! Next, we will add a little more to our index file, so that the browser can do a little bit more for us.
+And there we have it - a website in its most basic form: just text!
+
+Next, we will add a little more to our index file, so that the browser can do a little bit more work for us.
 
 ## Writing markup
 
-In every HTML file, we can add special text called _markup_ - this is the M in HTML - that communicates extra information to the browser.  We can tell the browser some special details about our document using particular markup for specific things we want to communicate, in the form of _tags_. These markup tags ultimately create what we call [HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+In every HTML file, we can add special text called _markup_ - this is the **M** in HTML - that communicates extra information to the browser.  We can tell the browser some special details about our document using particular markup for specific things we want to communicate, in the form of _tags_. These markup tags ultimately create what we call [HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-Tags work by declaring the start and end of our special piece of information. For example, if we want to say that our text is a _paragraph_ of text, we can use the `<p>` tag. We begin our text with an _opening_ tag: `<p>`, and finish it with a _closing_ tag `</p>`. We call markup such as this _semantic_, because it conveys special meaning about its contents.
+Tags work by declaring the start and end of our special piece of information. For example, if we want to say that our text is a _paragraph_ of text, we can use the `p` tag. We begin our text with an _opening_ tag: `<p>`, and finish it with a _closing_ tag `</p>`. We call markup such as this _semantic_, because it conveys special meaning about its contents.
 
 ```html
 <p>I am a paragraph of text.</p>
 ```
 
-By default, browsers have special formatting for such semantic markup. Let's add a few more things to our basic `index.html` file:
+By default, browsers have special formatting for such semantic markup. Let's see by add a few more things to our basic `index.html` file:
 
 ```html
 <h1>I am a level 1 heading</h1>
