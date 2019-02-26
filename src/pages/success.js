@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Section from '../components/Section'
 import CustomLink from '../components/CustomLink'
