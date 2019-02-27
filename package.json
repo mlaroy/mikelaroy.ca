@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-default",
   "description": "Gatsby default starter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@weknow/gatsby-remark-twitter": "^0.2.0",
