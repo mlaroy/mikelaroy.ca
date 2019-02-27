@@ -33,7 +33,7 @@ Here are some examples of commonly used text editors for making HTML documents:
 
 These text editors come with lots of tools designed to help you out, but at their core they all do the same thing: they let us create the documents in the proper formats required to make our website work.
 
-If you don't already have a program like this, now is the time to download one. They are all free to use, so go ahead and choose one. I have used both Sublime and VS Code in my professinal career, but they are all excellent choices.
+If you don't already have a program like this, now is the time to download one. They are all free to use, so go ahead and choose one. I have used both Sublime and VS Code in my professinal career, but they are all excellent choices. If you can't download anything, try using [TextEdit](https://support.apple.com/en-ca/guide/textedit/welcome/mac) or something similar that uses plain text already on your computer.
 
 ## Our first HTML file
 
@@ -173,5 +173,10 @@ So far we have:
 * used tags to mark up our html file with paragraphs, lists, headings, and tables
 * added a title to the `head` of our document
 * viewed our HTML page in a browser
+
+### Having troubles?
+* Be sure your file extension is `.htm` or `.html`, not `.txt` or something else
+* If your changes aren't showing in the browser, be sure you've saved the latest updates to your text file
+* If your changes still don't display, try clicking the refresh button in your browser while holding the SHIFT key. Sometimes browsers cache (or, keep) old information - more on this later
 
 **Next time: Part 2 - Markup cont'd, and Adding Styles**
