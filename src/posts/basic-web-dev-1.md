@@ -106,7 +106,7 @@ Finally, we can add markup to our document that communicates information about t
 
 Our document now has some extras. First of all, notice the `<!DOCTYPE html>` - here we are telling the browser what kind of document this is, so that it knows what specifications to use when presenting our document. The specs have changed over the years, and the latest and greatest is called _HTML5_.
 
-Next, we have the `html` tag itself. Since we have declared the type, now we must use this which is meant to be the _root elemnt_, or the parent of all the other tags we will use, which would be referred to as children.
+Next, we have the `html` tag itself. Since we have declared the type, now we must use this which is meant to be the _root element_, or the parent of all the other tags we will use, which would be referred to as children.
 
 Next is the `head` tag. Here is where we can put our extra information about the content of document. The first ones here are the `meta` tags,   telling the browser which [character encoding](https://developer.mozilla.org/en-US/docs/Glossary/UTF-8) to use (there are many), as well as how to render pixels for devices with higher densities of pixels, such as an iPhone with a retina screen. This ultimately helps us with making responsive websites, where the content and styles can be automatically adjusted to fit the screen that is viewing it. There are many other [meta tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta) which can communicate all sorts of things for us.
 
