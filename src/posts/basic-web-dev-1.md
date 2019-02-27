@@ -18,7 +18,7 @@ At its core, a website in its simplest form is a _document_, like a book or a le
 
 On top of being a document, a website can also be enhanced to be interactive, and behave like an application - many services use this approach, such as your banking institution or online stores. The browser is the native environment where this interactivity can take place.
 
-Utimately, our document needs to live on a computer that is accessible from the internet - we refer to this as a _server_. Essentially, your document exists on a server that is connected to the internet. Luckily, web browsers can also handle files that are just on your computer, and not yet on the internet - this is very handy when it comes to creating our website, before showing it to the world.  Keep in mind that your computer is not acting like a web server, we are merely accessing the computer's file system. More on this topic in a future post.
+Utimately, our document needs to live on a computer that is accessible from the internet - we refer to this as a _server_. Luckily, web browsers can also handle files that are just on your computer, and not yet on the internet - this is very handy when it comes to creating our website, before showing it to the world.  Keep in mind that your computer is not acting like a web server, we are merely accessing the computer's file system. More on this topic in a future post.
 
 ## Getting started
 
