@@ -97,7 +97,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-39603316-3",
+        trackingId: 'UA-39603316-3',
         // Puts tracking script in the head instead of the body
         head: false,
         // Setting this parameter is optional
@@ -109,7 +109,7 @@ module.exports = {
         // Any additional create only fields (optional)
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "mikelaroy.ca",
+        cookieDomain: 'mikelaroy.ca',
       }
     },
     {

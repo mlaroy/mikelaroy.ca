@@ -10,6 +10,7 @@ import LatestPost from '../components/latestPost'
 import BlogTeaser from '../components/BlogTeaser'
 import Work from '../components/Work'
 import CustomLink from '../components/CustomLink';
+import LogoGarden from '../components/LogoGarden';
 import portrait from '../images/portrait.jpg';
 import portrait_square from '../images/portrait-square.jpg';
 
@@ -108,6 +109,11 @@ class IndexPage extends Component {
           </Narrow>
         </Section>
         <Section css="bg-grey-lighter" id="contact">
+          <Narrow>
+            <LogoGarden />
+          </Narrow>
+        </Section>
+        <Section css="bg-white" id="contact">
           <Narrow>
             <h2 className="text-2x md:text-5xl section-heading ">Contact</h2>
             <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch. Check out these {" "}
