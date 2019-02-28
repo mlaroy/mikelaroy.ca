@@ -110,6 +110,11 @@ footer a,
   @apply .bg-blue .rounded;
 }
 
+.text-center.section-heading:before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .section-heading--inverted:before {
   content: '';
   @apply .bg-white .rounded;
@@ -269,6 +274,10 @@ pre {
 .fade-in {
   animation-name: fadeIn;
   animation-duration: 0.8s;
+}
+
+.greyscale {
+  filter: grayscale(100%);
 }
 
 
