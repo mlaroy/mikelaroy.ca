@@ -8,6 +8,8 @@ import coastCapital from '../images/logos/coast-capital.png';
 import britishFashion from '../images/logos/british-fashion.png';
 import greatWest from '../images/logos/greatwest.png';
 import samFrench from '../images/logos/samfrench.png';
+import beyondTrust from '../images/logos/beyond-trust.png';
+import vct from '../images/logos/vct.png';
 
 const LogoGroup = styled.div`
   display: grid;
@@ -18,7 +20,7 @@ const LogoGroup = styled.div`
 const LogoGarden = () => {
   return (
     <div>
-      <h3 className="text-xl md:text-3xl section-heading text-center">Other Clients</h3>
+      <h3 className="text-xl md:text-3xl section-heading text-center">More clients</h3>
       <LogoGroup>
         {images().map(img => {
           return (
@@ -33,9 +35,10 @@ const LogoGarden = () => {
 
 const images = () => {
   return [
+
     {
-      src: riverRock,
-      alt: 'RiverRock Casino'
+      src: greatWest,
+      alt: 'Great-West Life'
     },
     {
       src: hydro,
@@ -50,16 +53,24 @@ const images = () => {
       alt: 'Coast Capital Savings'
     },
     {
+      src: beyondTrust,
+      alt: 'BeyondTrust'
+    },
+    {
+      src: riverRock,
+      alt: 'RiverRock Casino'
+    },
+    {
       src: samFrench,
       alt: 'Samuel French'
     },
     {
-      src: donnelly,
-      alt: 'Donnelly Group'
+      src: vct,
+      alt: 'Vancouver Civic Theatres'
     },
     {
-      src: greatWest,
-      alt: 'Great-West Life'
+      src: donnelly,
+      alt: 'Donnelly Group'
     },
     {
       src: britishFashion,
