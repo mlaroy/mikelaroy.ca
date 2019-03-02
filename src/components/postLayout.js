@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { DiscussionEmbed } from 'disqus-react';
-import { graphql } from 'gatsby'
-import styled from 'styled-components'
-import Layout from './layout'
-import Section from './Section'
-import Signature from './signature'
-import Helmet from 'react-helmet'
-import Share from './share'
+import { graphql, Link } from 'gatsby';
+import CustomLink from './CustomLink';
+import styled from 'styled-components';
+import Layout from './layout';
+import Section from './Section';
+import Signature from './signature';
+import Helmet from 'react-helmet';
+import Share from './share';
 
 const Narrow = styled.div`
   max-width: 960px;
@@ -16,6 +17,8 @@ const Narrow = styled.div`
 class postLayout extends Component {
   render() {
     const { markdownRemark, site } = this.props.data;
+    const { previous, next } = this.props.pathContext;
+    console.log(previous);
     const { html, timeToRead, excerpt } = markdownRemark;
     const { date, title, slug } = markdownRemark.frontmatter
     const disqusShortname = 'mikelaroy';
@@ -60,6 +63,18 @@ class postLayout extends Component {
             }}></div>
             <div className="my-8">
               <Signature />
+            </div>
+            <div className="flex justify-between my-16">
+              {previous && (
+                <CustomLink to={`/blog${previous.frontmatter.slug}`} css="text-blue hover:text-orange" rel="prev">
+                  ← {previous.frontmatter.title}
+                </CustomLink>
+              )}
+              {next && (
+                <CustomLink to={`/blog${next.frontmatter.slug}`} css="text-blue hover:text-orange" rel="next">
+                  {next.frontmatter.title} →
+                </CustomLink>
+              )}
             </div>
             <Share
               url={this.props.location}

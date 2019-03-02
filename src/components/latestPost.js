@@ -7,7 +7,8 @@ const LatestPost = () => (
     query={POST_ARCHIVE_QUERY}
     render={({allMarkdownRemark}) => (
       <>
-        {allMarkdownRemark.edges.map(edge => <BlogTeaser key={edge.node.frontmatter.slug} post={edge} linkColor="text-white" />)}
+        {allMarkdownRemark.edges.map(edge =>
+          <BlogTeaser key={edge.node.frontmatter.slug} post={edge} linkColor="text-white" />)}
       </>
     )}
   />
