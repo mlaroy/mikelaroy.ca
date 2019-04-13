@@ -71,11 +71,11 @@ const Layout = ({ children, description, title }) => (
                 },
                 {
                   property: `og:image:width`,
-                  content: `600`,
+                  content: `300`,
                 },
                 {
                   property: `og:image:height`,
-                  content: `400`,
+                  content: `200`,
                 },
                 {
                   name: `twitter:card`,
