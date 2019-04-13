@@ -71,6 +71,9 @@ class IndexPage extends Component {
                   I love hearing from new people and potential partners, so if you are looking for a reliable and creative developer,
                   please get in touch below. I love to build in Gatsby, WordPress, Statamic, and other platforms.
                 </p>
+                <p className="text-md md:text-xl mb-4">
+                  I'm the founder of <a href="https://cascadia.digital" className="text-blue hover:text-orange transition">Cascadia Digital</a>, a web consulting firm that partners with agencies and businesses for web development projects.
+                </p>
                 <p className="text-md md:text-xl">
                   You can also find me over on <a href="https://twitter.com/laroymike" className="text-blue hover:text-orange transition">twitter</a>.
                 </p>
@@ -108,7 +111,7 @@ class IndexPage extends Component {
             </p>
           </Narrow>
         </Section>
-        <Section css="bg-grey-lighter" id="contact">
+        <Section css="bg-grey-lighter">
           <Narrow>
             <LogoGarden />
           </Narrow>
