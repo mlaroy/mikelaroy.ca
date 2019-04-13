@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-default",
   "description": "Gatsby default starter",
-  "version": "0.1.7",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "0.1.0",
+  "author": "Michael LaRoy <mike@mikelaroy.ca>",
   "dependencies": {
     "@weknow/gatsby-remark-twitter": "^0.2.0",
     "babel-plugin-styled-components": "^1.8.0",
