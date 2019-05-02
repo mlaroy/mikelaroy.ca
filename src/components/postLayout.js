@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DiscussionEmbed } from 'disqus-react';
+// import { DiscussionEmbed } from 'disqus-react';
 import { graphql, Link } from 'gatsby';
 import CustomLink from './CustomLink';
 import styled from 'styled-components';
@@ -81,9 +81,9 @@ class postLayout extends Component {
               title={title}
               description={excerpt}
             />
-            <div className="my-8">
+            {/* <div className="my-8">
               <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-            </div>
+            </div> */}
           </Narrow>
         </Section>
       </Layout>
