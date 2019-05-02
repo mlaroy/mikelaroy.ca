@@ -18,14 +18,14 @@ class postLayout extends Component {
   render() {
     const { markdownRemark, site } = this.props.data;
     const { previous, next } = this.props.pathContext;
-    console.log(previous);
+    // console.log(previous);
     const { html, timeToRead, excerpt } = markdownRemark;
     const { date, title, slug } = markdownRemark.frontmatter
-    const disqusShortname = 'mikelaroy';
-    const disqusConfig = {
-      identifier: slug,
-      title: title,
-    };
+    // const disqusShortname = 'mikelaroy';
+    // const disqusConfig = {
+    //   identifier: slug,
+    //   title: title,
+    // };
 
     return (
       <Layout>
@@ -77,7 +77,7 @@ class postLayout extends Component {
               )}
             </div>
             <Share
-              url={this.props.location}
+              url={this.props.location.href}
               title={title}
               description={excerpt}
             />
