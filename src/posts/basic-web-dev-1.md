@@ -179,4 +179,4 @@ So far we have:
 * If your changes aren't showing in the browser, be sure you've saved the latest updates to your text file
 * If your changes still don't display, try clicking the refresh button in your browser while holding the SHIFT key. Sometimes browsers cache (or, keep) old information - more on this later
 
-**Next time: Part 2 - Markup cont'd, and Adding Styles**
+Next time: [Part 2 - Markup cont'd, and Adding Styles](/blog/basic-web-development-part-2)
