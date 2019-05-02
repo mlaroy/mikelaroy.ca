@@ -28,17 +28,17 @@ const openInNewWindow = (url, title) => {
 
 const getTwitterLink = props => {
   const { url, title } = props;
-  return `http://twitter.com/home?status=${title}%20${url.href}`
+  return `http://twitter.com/home?status=${title}%20${url}`
 }
 
 const getFacebookLink = props => {
   const { url, title } = props;
-  return `http://www.facebook.com/sharer/sharer.php?u=${url.href}`
+  return `http://www.facebook.com/sharer/sharer.php?u=${url}`
 }
 
 const getLinkedInLink = props => {
   const { url, title, description } = props;
-  return `http://www.linkedin.com/shareArticle?mini=true&url=${url.href}&title=${title}&summary=${description}&source=LinkedIn`
+  return `http://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${description}&source=LinkedIn`
 }
 
 export default share;
