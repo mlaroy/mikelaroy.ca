@@ -10,7 +10,7 @@ In our [last post](/blog/basic-web-development-part-1), we introduced the concep
 
 *But it still doesn't look like much...*
 
-How do we solve that? How can we make our site look better? Clearly there's more to it than just tags to give this some *style*.  There are a couple of tag we can place in our HTML documents to help us out in this regard, and we'll start with the easier one.
+How do we solve that? How can we make our site look better? Clearly there's more to it than just tags to give this some *style*.  There are a couple of tags we can place in our HTML documents to help us out in this regard, and we'll start with the easier one.
 
 ## Adding styles with the Style tag
 
@@ -107,7 +107,7 @@ The `max-width` property tells it not to exceed a certain size, though depending
 
 ### Fonts
 
-Finally, the `font-family` property let's us set the font we want to use. You'll notice that we have muliple ones here, separated by a comma. The browser will go left to right, and will only use the subsequent font if it can't find the first one. In this case, `Helvetica` is a system font on any Mac, but a Windows computer doesn't have it by default. So a Mac will render the page using Helvetica, and a Windows machine Arial. Finally, we use a more generic `sans-serif` in case any of the first ones fail. We'll look at using different font approaches and examining font services in a future post.
+Finally, the `font-family` property let's us set the font we want to use. You'll notice that we have muliple ones here, separated by a comma. The browser will go left to right, and will only use the subsequent font if it can't find the first one. In this case, `Helvetica` is a system font on any Mac, but a Windows computer doesn't have it by default. So a Mac will render the page using Helvetica, and a Windows machine Arial. Finally, we use a more generic `sans-serif` in case both of the first ones fail. We'll look at using different font approaches and examining font services in a future post.
 
 ```css
 body {
@@ -117,7 +117,7 @@ body {
 
 ### Colours
 
-Finally, you'll see that our `color` an `background-color` properties are using weird numbers. This is using the [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) system to reference colour values. In CSS, it uses six digits; two each for the red, green and blue components of the colour. A three digit value is also valid, depending on the configuration. Follow the link above for a more information. Here's a handy tool to help [find the codes for the colours](https://htmlcolorcodes.com/) you're looking to use.
+Finally, you'll see that our `color` and `background-color` properties are using weird numbers. This is using the [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) system to reference colour values. In CSS, it uses six digits; two each for the red, green and blue components of the colour. A three digit value is also valid, depending on the configuration. Follow the link above for a more information. Here's a handy tool to help [find the codes for the colours](https://htmlcolorcodes.com/) you're looking to use.
 
 Our newly styled page should look like this:
 
