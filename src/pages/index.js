@@ -119,8 +119,7 @@ class IndexPage extends Component {
         <Section css="bg-white" id="contact">
           <Narrow>
             <h2 className="text-2x md:text-5xl section-heading ">Contact</h2>
-            <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch. Check out these {" "}
-            <CustomLink to="/blog/guidelines-webdesign-request-proposal">guidelines</CustomLink> for RFPs.</p>
+            <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch.</p>
             {renderContactForm(this.state)}
           </Narrow>
         </Section>
@@ -143,14 +142,10 @@ const splitRight = () => {
     <aside>
       <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted text-shadow">Nerd Zone</h3>
       <p className="text-base md:text-xl mb-4">
-        This site was designed in the browser with React/Gatsby, and Tailwind CSS.
-      </p>
-      <p className="text-base md:text-xl mb-4">
-        Fonts come from Google fonts - Copse (serif) for headings, and Roboto (sans-serif) for body text.
+        This site was built with Gatsby (React), Tailwind CSS, and is hosted on <CustomLink to="https://www.netlify.com/" css="text-white hover:text-blue" external={true}>Netlify</CustomLink>.
       </p>
       <p className="text-base md:text-xl">
-        This site is hosted on Netlify, and is deployed from {" "}
-        <CustomLink to="https://github.com/mlaroy/mikelaroy.ca" css="text-white hover:text-blue" external={true}>Github</CustomLink>.
+        Fonts come from Google fonts - Copse (serif) for headings, and Roboto (sans-serif) for body text.
       </p>
     </aside>
   )
