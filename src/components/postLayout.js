@@ -17,7 +17,7 @@ const Narrow = styled.div`
 class postLayout extends Component {
   render() {
     const { markdownRemark, site } = this.props.data;
-    const { previous, next } = this.props.pathContext;
+    const { previous, next } = this.props.pageContext;
     // console.log(previous);
     const { html, timeToRead, excerpt } = markdownRemark;
     const { date, title, slug } = markdownRemark.frontmatter

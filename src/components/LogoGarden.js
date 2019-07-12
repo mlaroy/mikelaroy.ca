@@ -24,7 +24,7 @@ const LogoGarden = () => {
       <LogoGroup>
         {images().map(img => {
           return (
-            <img src={img.src} alt={img.alt} className="p-4 greyscale" />
+            <img src={img.src} alt={img.alt} className="p-4 greyscale" key={img.src} />
           )
         })}
       </LogoGroup>

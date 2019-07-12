@@ -4,19 +4,20 @@ import getIcon from './icons';
 
 class CustomLink extends Component {
   render() {
-    const { children, css, to, external = false, icon = false } = this.props;
-    const classes = `hover:text-orange transition ${css ? css : 'text-blue'}`
+    const { children, classes, to, external = false, icon = false } = this.props;
+    console.log({classes});
+    const styles = `hover:text-orange transition ${classes ? classes : 'text-blue'}`
 
     if (external) {
       return (
-        <a href={to} className={classes}>
+        <a href={to} className={styles}>
           {children}
           {icon && getIcon(icon)}
         </a>
       );
     }else{
       return (
-        <Link className={classes} to={to}>
+        <Link className={styles} to={to}>
           {children}
           {icon && getIcon(icon)}
         </Link>

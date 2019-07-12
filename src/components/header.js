@@ -5,13 +5,13 @@ import Signature from './signature'
 const Header = ({ siteTitle }) => (
   <header className="w-full bg-white">
     <div className="flex justify-between h-full px-8 container">
-      <CustomLink to="/" css="self-center font-serif no-underline text-xl relative">
-        <Signature css="site-logo mt-4 w-32 md:w-48" width="180" />
+      <CustomLink to="/" classes="self-center font-serif no-underline text-xl relative">
+        <Signature classes="site-logo mt-4 w-32 md:w-48" width="180" />
       </CustomLink>
       <nav className="flex align-center header-nav">
-        <CustomLink to="#about" css="self-center">About</CustomLink>
-        <CustomLink to="/blog" css="self-center ml-4">Blog</CustomLink>
-        <CustomLink to="#contact" css="self-center ml-4">Contact</CustomLink>
+        <CustomLink to="#about" classes="self-center">About</CustomLink>
+        <CustomLink to="/blog" classes="self-center ml-4">Blog</CustomLink>
+        <CustomLink to="#contact" classes="self-center ml-4">Contact</CustomLink>
       </nav>
     </div>
   </header>
