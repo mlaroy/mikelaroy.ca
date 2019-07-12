@@ -48,15 +48,15 @@ class IndexPage extends Component {
         <Hero>
           <div className="px-8 py-12 sm:py-16 md:px-32 md:pt-32 md:pb-8">
             <h2 className="text-2xl md:text-4xl lg:text-6xl leading-tight">
-              Hi, I’m <span className="text-blue">Michael LaRoy</span>, <br class="hidden md:block" />
-              a web development consultant in <br class="hidden md:block"  />
+              Hi, I’m <span className="text-blue">Michael LaRoy</span>, <br className="hidden md:block" />
+              a web development consultant in <br className="hidden md:block"  />
               Abbotsford, British Columbia
               <span className="text-sm block font-normal">(that's near Vancouver)</span>
             </h2>
-            <CustomLink css="button mx-auto text-blue-dark mt-16" to="/blog">Read some of my thoughts &rarr;</CustomLink>
+            <CustomLink classes="button mx-auto text-blue-dark mt-16" to="/blog">Read some of my thoughts &rarr;</CustomLink>
           </div>
         </Hero>
-        <Section css="bg-blue text-white">
+        <Section classes="bg-blue text-white">
           <Narrow>
             <div className="flex flex-col sm:flex-row">
               <div className="w-full sm:w-1/3 max-w-xs flex flex-col justify-center">
@@ -72,7 +72,7 @@ class IndexPage extends Component {
                   please get in touch below. I love to build in Gatsby, WordPress, Statamic, and other platforms.
                 </p>
                 <p className="text-md md:text-xl mb-4">
-                  I'm the founder of <a href="https://cascadia.digital" className="text-blue hover:text-orange transition">Cascadia Digital</a>, a web consulting firm that partners with agencies and businesses for web development projects.
+                  Currently, I'm working at <a href="https://10up.com" className="text-blue hover:text-orange transition">10up</a>, and I'm also the founder of <a href="https://cascadia.digital" className="text-blue hover:text-orange transition">Cascadia Digital</a>, a micro web consulting firm.
                 </p>
                 <p className="text-md md:text-xl">
                   You can also find me over on <a href="https://twitter.com/laroymike" className="text-blue hover:text-orange transition">twitter</a>.
@@ -81,13 +81,13 @@ class IndexPage extends Component {
             </div>
           </Narrow>
         </Section>
-        <Section css="bg-white">
+        <Section classes="bg-white">
           <Narrow>
             <Work />
           </Narrow>
         </Section>
         <Split left={left} right={right} />
-        <Section css="bg-white"  id="about">
+        <Section classes="bg-white"  id="about">
           <Narrow>
             <h2 className="text-2xl md:text-5xl section-heading">About</h2>
             <p className="text-base md:text-xl mt-4 mb-4">
@@ -111,12 +111,12 @@ class IndexPage extends Component {
             </p>
           </Narrow>
         </Section>
-        <Section css="bg-grey-lighter">
+        <Section classes="bg-grey-lighter">
           <Narrow>
             <LogoGarden />
           </Narrow>
         </Section>
-        <Section css="bg-white" id="contact">
+        <Section classes="bg-white" id="contact">
           <Narrow>
             <h2 className="text-2x md:text-5xl section-heading ">Contact</h2>
             <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch.</p>
@@ -142,7 +142,7 @@ const splitRight = () => {
     <aside>
       <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted text-shadow">Nerd Zone</h3>
       <p className="text-base md:text-xl mb-4">
-        This site was built with Gatsby (React), Tailwind CSS, and is hosted on <CustomLink to="https://www.netlify.com/" css="text-white hover:text-blue" external={true}>Netlify</CustomLink>.
+        This site was built with Gatsby (React), Tailwind CSS, and is hosted on <a href="https://www.netlify.com/" className="text-white hover:text-blue">Netlify</a>.
       </p>
       <p className="text-base md:text-xl">
         Fonts come from Google fonts - Copse (serif) for headings, and Roboto (sans-serif) for body text.
