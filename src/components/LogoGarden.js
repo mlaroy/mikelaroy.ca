@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import hydro from '../images/logos/bchydro.png';
 import telus from '../images/logos/telus.png';
 import riverRock from '../images/logos/river-rock.png';
-import donnelly from '../images/logos/donnelly.png';
+import github from '../images/logos/github.png';
 import coastCapital from '../images/logos/coast-capital.png';
-import britishFashion from '../images/logos/british-fashion.png';
+import microsoft from '../images/logos/microsoft.png';
 import greatWest from '../images/logos/greatwest.png';
 import samFrench from '../images/logos/samfrench.png';
 import beyondTrust from '../images/logos/beyond-trust.png';
 import vct from '../images/logos/vct.png';
+import sap from '../images/logos/sap-logo.png';
 
 const LogoGroup = styled.div`
   display: grid;
@@ -24,7 +25,7 @@ const LogoGarden = () => {
       <LogoGroup>
         {images().map(img => {
           return (
-            <img src={img.src} alt={img.alt} className="p-4 greyscale" key={img.src} />
+            <img src={img.src} alt={img.alt} className="greyscale" key={img.src} />
           )
         })}
       </LogoGroup>
@@ -35,10 +36,21 @@ const LogoGarden = () => {
 
 const images = () => {
   return [
-
+    {
+      src: microsoft,
+      alt: 'Microsoft'
+    },
+    {
+      src: sap,
+      alt: 'SAP'
+    },
     {
       src: greatWest,
       alt: 'Great-West Life'
+    },
+    {
+      src: github,
+      alt: 'Github'
     },
     {
       src: hydro,
@@ -57,24 +69,12 @@ const images = () => {
       alt: 'BeyondTrust'
     },
     {
-      src: riverRock,
-      alt: 'RiverRock Casino'
-    },
-    {
       src: samFrench,
       alt: 'Samuel French'
     },
     {
       src: vct,
       alt: 'Vancouver Civic Theatres'
-    },
-    {
-      src: donnelly,
-      alt: 'Donnelly Group'
-    },
-    {
-      src: britishFashion,
-      alt: 'British Fashion Council'
     }
   ]
 }
