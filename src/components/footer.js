@@ -15,7 +15,7 @@ class Footer extends Component {
       <footer className="w-full container">
         <button
           type="button"
-          className="scroll-top-button bg-white p-4 shadow rounded-full"
+          className="scroll-top-button bg-white p-2 shadow rounded-full"
           onClick={() => this.backToTop()}>
           Top &uarr;
         </button>
