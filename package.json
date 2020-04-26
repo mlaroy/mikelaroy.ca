@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-default",
   "description": "Gatsby default starter",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "author": "Michael LaRoy <mike@mikelaroy.ca>",
   "dependencies": {
     "@weknow/gatsby-remark-twitter": "^0.2.0",
