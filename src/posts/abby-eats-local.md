@@ -9,7 +9,7 @@ We called the locally-owned Vietnamese place nearby to order takeout, and to our
 
 Last week, my wife had a brilliant idea - why don't we make the list ourselves? Between the two of us, we have the skills to [make it a reality](https://abbyeatslocal.com). Inspired by the idea, I got to work and had a prototype ready in a few hours.
 
-The goal is simple - a list of restaurants that are still open, along with their current hours of operation, contact info, and website links. By adding a few categeories for filtering, the public can easily discover which establishment do delivery, takeout, etc., and take it from there.
+The goal is simple - a list of restaurants that are still open, along with their current hours of operation, contact info, and website links. By adding a few categeories for filtering, the public can easily discover which establishments do delivery, takeout, etc., and take it from there.
 
 We spent the next week (during our non-working hours) going back and forth with ideas, working out the details: what is the scope?  What does it mean to be "local"? We narrowed it down to restaurants and breweries (sorry wineries, we love you too) that were owned or started here in British Columbia and had a presence in our city, doing some combination of food/drink by delivery or takeout. For the most part, this meant one-off joints only found here, but also includes small chains that are local to the area.
 
