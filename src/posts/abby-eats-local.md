@@ -13,7 +13,7 @@ The goal is simple - a list of restaurants that are still open, along with their
 
 We spent the next week (during our non-working hours) going back and forth with ideas, working out the details: what is the scope?  What does it mean to be "local"? We narrowed it down to restaurants and breweries (sorry wineries, we love you too) that were owned or started here in British Columbia and had a presence in our city, doing some combination of food/drink by delivery or takeout. For the most part, this meant one-off joints only found here, but also includes small chains that are local to the area.
 
-Together with wife, a communications professional, we fleshed out our strategy to bring the vision to life (spreadsheets are tremendously handy). Our combined skillsets helped us tremendously to keep our scope focused, and the user experienced streamlined. Finally, a week after the initial prototype, we had it ready to go, and launched it.
+Together with wife, a communications professional, we fleshed out our strategy to bring the vision to life (spreadsheets are tremendously handy). Our combined skillsets helped us to keep our scope focused, and the user experienced streamlined. Finally, a week after the initial prototype, we had it ready to go, and launched it.
 
 Only time will tell if it makes any difference and drives some more traffic to our local food and drink places. Early analytics reveal a few hundred visitors within the first hours of pushing it out on social channels, which is an encouraging start. At the very least, we were both able to leverage our talents to give back to the community while staying home, as is recommended to do.
 
