@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import hydro from '../images/logos/bchydro.png';
+import hydro from '../images/logos/bchydro-logo-high-res.png';
 import telus from '../images/logos/telus.png';
-import riverRock from '../images/logos/river-rock.png';
+// import riverRock from '../images/logos/river-rock.png';
 import github from '../images/logos/github.png';
 import coastCapital from '../images/logos/coast-capital.png';
 import microsoft from '../images/logos/microsoft.png';
-import greatWest from '../images/logos/greatwest.png';
+import canadalife from '../images/logos/canada-life.png';
 import samFrench from '../images/logos/samfrench.png';
 import beyondTrust from '../images/logos/beyond-trust.png';
 import vct from '../images/logos/vct.png';
@@ -45,8 +45,8 @@ const images = () => {
       alt: 'SAP'
     },
     {
-      src: greatWest,
-      alt: 'Great-West Life'
+      src: canadalife,
+      alt: 'Canada Life'
     },
     {
       src: github,

@@ -69,10 +69,7 @@ class IndexPage extends Component {
                 <h3 className="text-2xl md:text-4xl mb-16 section-heading section-heading--inverted text-shadow"> Nice to meet you</h3>
                 <p className="text-md md:text-xl mb-4">
                   I love hearing from new people and potential partners, so if you are looking for a reliable and creative developer,
-                  please get in touch below. I love to build in Gatsby, WordPress, Statamic, and other platforms.
-                </p>
-                <p className="text-md md:text-xl mb-4">
-                  Currently, I'm working at <a href="https://10up.com" className="text-blue hover:text-orange transition">10up</a>, and I'm also the founder of <a href="https://cascadia.digital" className="text-blue hover:text-orange transition">Cascadia Digital</a>, a micro web consulting firm.
+                  please get in touch below. I love to build in Gatsby, WordPress, Vue, React, and other platforms.
                 </p>
                 <p className="text-md md:text-xl">
                   You can also find me over on <a href="https://twitter.com/laroymike" className="text-blue hover:text-orange transition">twitter</a>.
