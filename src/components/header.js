@@ -9,9 +9,9 @@ const Header = ({ siteTitle }) => (
         <Signature classes="site-logo mt-4 w-32 md:w-48" width="180" />
       </CustomLink>
       <nav className="flex align-center header-nav">
-        <CustomLink to="#about" classes="self-center">About</CustomLink>
-        <CustomLink to="/blog" classes="self-center ml-4">Blog</CustomLink>
-        <CustomLink to="#contact" classes="self-center ml-4">Contact</CustomLink>
+        <CustomLink to="/#about" classes="self-center" external="false">About</CustomLink>
+        <CustomLink to="/blog" classes="self-center ml-4" external="false">Blog</CustomLink>
+        <CustomLink to="/#contact" classes="self-center ml-4" external="false">Contact</CustomLink>
       </nav>
     </div>
   </header>
