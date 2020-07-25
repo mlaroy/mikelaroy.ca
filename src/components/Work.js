@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 
 import sf from '../images/sf.png';
 import vct from '../images/vct.png';
-import credential from '../images/credential.png';
+// import credential from '../images/credential.png';
+import abbylocal from '../images/abby-eats-local.png';
 import ipom from '../images/ipom.png';
 import CustomLink from './CustomLink';
 
@@ -139,6 +140,14 @@ class Work extends Component {
 const getWorks = () => {
   return [
     {
+      image: abbylocal,
+      id: 'abbylocal',
+      title: 'Abby Eats Local',
+      description: 'My wife and I built this resource on our own initiative to serve our local community, by helping to drive business to local restaurants during COVID-19. Built with React using Gastby.',
+      url: 'https://abbyeatslocal.com',
+      post: '/blog/abby-eats-local'
+    },
+    {
       image: ipom,
       id: 'ipom',
       title: 'In Pursuit Of More',
@@ -154,14 +163,15 @@ const getWorks = () => {
       url: 'https://www.samuelfrench.com/',
       post: null
     },
-    {
-      image: credential,
-      id: 'credential',
-      title: 'Credential Direct',
-      description: 'Another Engine Digital project, Credential Direct was a top-to-bottom WordPress build. As the lead developer, I built out the front-end, as well as the WordPress integration, including JavaScript features using the WordPress REST API. Update: it appears to have been acquired, so the site is no longer up so no link is provided. ',
-      url: null,
-      post: null
-    },
+
+    // {
+    //   image: credential,
+    //   id: 'credential',
+    //   title: 'Credential Direct',
+    //   description: 'Another Engine Digital project, Credential Direct was a top-to-bottom WordPress build. As the lead developer, I built out the front-end, as well as the WordPress integration, including JavaScript features using the WordPress REST API. Update: it appears to have been acquired, so the site is no longer up so no link is provided. ',
+    //   url: null,
+    //   post: null
+    // },
     {
       image: vct,
       id: 'vct',

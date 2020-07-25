@@ -7,7 +7,7 @@ import ContactForm from '../components/ContactForm'
 import Section from '../components/Section'
 import Split from '../components/Split'
 import LatestPost from '../components/latestPost'
-import BlogTeaser from '../components/BlogTeaser'
+// import BlogTeaser from '../components/BlogTeaser'
 import Work from '../components/Work'
 import CustomLink from '../components/CustomLink';
 import LogoGarden from '../components/LogoGarden';
@@ -51,7 +51,7 @@ class IndexPage extends Component {
               Hi, I’m <span className="text-blue">Michael LaRoy</span>, <br className="hidden md:block" />
               a web development consultant in <br className="hidden md:block"  />
               Abbotsford, British Columbia
-              <span className="text-sm block font-normal">(that's near Vancouver)</span>
+              <span className="text-sm block font-normal"> (that's near Vancouver) </span>
             </h2>
             <CustomLink classes="button mx-auto text-blue-dark mt-16" to="/blog">Read some of my thoughts &rarr;</CustomLink>
           </div>
@@ -72,7 +72,7 @@ class IndexPage extends Component {
                   please get in touch below. I love to build in Gatsby, WordPress, Vue, React, and other platforms.
                 </p>
                 <p className="text-md md:text-xl">
-                  You can also find me over on <a href="https://twitter.com/laroymike" className="text-blue hover:text-orange transition">twitter</a>.
+                  I am the founder of the micro-agency <a href="https://cascadia.digital">Cascadia Digital</a>, and you can also find me over on <a href="https://twitter.com/laroymike" className="text-blue hover:text-orange transition">twitter</a>.
                 </p>
               </div>
             </div>

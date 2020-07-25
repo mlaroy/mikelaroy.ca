@@ -5,7 +5,6 @@ import getIcon from './icons';
 class CustomLink extends Component {
   render() {
     const { children, classes, to, external = false, icon = false } = this.props;
-    console.log({classes});
     const styles = `hover:text-orange transition ${classes ? classes : 'text-blue'}`
 
     if (external) {
