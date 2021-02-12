@@ -9,10 +9,10 @@ class BlogTeaser extends Component {
     const { excerpt } = post.node;
     return (
       <article className="blog-article">
-        <CustomLink to={`/blog${slug}`} css={`${linkColor} no-underline`}>
+        <CustomLink to={`/blog${slug}`} classes={`${linkColor} no-underline`}>
           <h2 className="text-2xl md:text-3xl mb-2">{title}</h2>
         </CustomLink>
-        <time className="mb-4 block text-sm">{date}</time>
+        <time className="mb-8 block text-sm">{date}</time>
         <p className={pSize}>
           {excerpt}
         </p>
