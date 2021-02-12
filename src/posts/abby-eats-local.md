@@ -3,6 +3,9 @@ title: Abby Eats Local - Supporting Local Eateries & Breweries During COVID-19
 slug: '/abby-eats-local'
 date: '2020-04-25'
 ---
+
+![Abby Eats Local](images/abby-eats-local-small.png)
+
 Early on in the days of the "stay at home" recommendations during the COVID-19 pandemic, my wife and I decided we wanted to help support local eateries - as we like to eat out every now and then anyway, this was an easy decision.
 
 We called the locally-owned Vietnamese place nearby to order takeout, and to our dismay, we discovered that they had closed up shop totally - no takeout, no delivery, nothing. Disheartened, we searched for other places we could support, but we had a hard time finding any sort of central list detailing places that were still open in some capacity. Over the course of the next couple of weeks, we encountered this each time we tried to order takeout.
