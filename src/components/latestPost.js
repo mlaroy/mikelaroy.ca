@@ -8,7 +8,7 @@ const LatestPost = () => (
     render={({allMarkdownRemark}) => (
       <>
         {allMarkdownRemark.edges.map(edge =>
-          <BlogTeaser key={edge.node.frontmatter.slug} post={edge} linkColor="text-white" />)}
+          <BlogTeaser key={edge.node.frontmatter.slug} post={edge} linkColor="text-blue" />)}
       </>
     )}
   />

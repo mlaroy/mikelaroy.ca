@@ -13,6 +13,8 @@ import CustomLink from '../components/CustomLink';
 import LogoGarden from '../components/LogoGarden';
 import portrait from '../images/portrait.jpg';
 import portrait_square from '../images/portrait-square.jpg';
+import cascadiaLogo from '../images/cascadia-logo-5-white.svg';
+import mountains from '../images/mountains.jpg';
 
 const Narrow = styled.div`
   max-width: 960px;
@@ -21,7 +23,7 @@ const Narrow = styled.div`
 `
 
 const Hero = styled.div`
-  ${tw`py-8 md:text-center mb-8`}
+  ${tw`py-8 mb-8 container md:flex`}
 `
 
 class IndexPage extends Component {
@@ -45,18 +47,34 @@ class IndexPage extends Component {
     const right = splitRight();
     return (
       <Layout>
-        <Hero>
-          <div className="px-8 py-12 sm:py-16 md:px-32 md:pt-32 md:pb-8">
-            <h2 className="text-2xl md:text-4xl lg:text-6xl leading-tight">
+        <header className="pt-12 md:py-24 sm:mb-8 container md:flex">
+          <div className="p-8 md:pl-4 md:pr-16 md:w-1/2 flex flex-col justify-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl leading-tight">
               Hi, I’m <span className="text-blue">Michael LaRoy</span>, <br className="hidden md:block" />
-              a web development consultant in <br className="hidden md:block"  />
+              a web development consultant in
               Abbotsford, British Columbia
-              <span className="text-sm block font-normal"> (that's near Vancouver) </span>
+              <span className="text-sm block font-normal mt-2"> (that's near Vancouver) </span>
             </h2>
-            <CustomLink classes="button mx-auto text-blue-dark mt-16" to="/blog">Read some of my thoughts &rarr;</CustomLink>
+            {/* <CustomLink classes="button mx-auto text-blue-dark mt-16" to="/blog">Read some of my thoughts &rarr;</CustomLink> */}
           </div>
-        </Hero>
-        <Section classes="bg-blue text-white">
+          <div className="px-8 py-12 sm:py-16 md:p-16 bg-jp-indigo text-white md:w-1/2 sm:rounded flex flex-col justify-center relative shadow-lg overflow-hidden">
+            <div className="z-10">
+              <img src={cascadiaLogo} width="150px" alt="Michael LaRoy" className="block mb-4"/>
+              <h2 className="text-2xl md:text-3xl leading-tight mb-4">Looking for a web development partner?</h2>
+              <p className="text-lg">
+                Please head over to <a href="https://cascadia.digital/">Cascadia Digital</a>{' '}
+                to get in touch, and we can talk business.
+              </p>
+            </div>
+            <img src={mountains} alt="" className="mx-auto block absolute h-full w-full pin-t pin-x z-0 opacity-25"
+              style={{
+                objectPosition: 'center',
+                objectFit: 'cover'
+              }}
+            />
+          </div>
+        </header>
+        <Section classes="bg-grey-lighter">
           <Narrow>
             <div className="flex flex-col sm:flex-row">
               <div className="w-full sm:w-1/3 max-w-xs flex flex-col justify-center">
@@ -66,25 +84,31 @@ class IndexPage extends Component {
                 </picture>
               </div>
               <div className="w-full sm:w-2/3 mt-16 sm:mt-0 sm:ml-16 md:ml-32 flex flex-col justify-center">
-                <h3 className="text-2xl md:text-4xl mb-16 section-heading section-heading--inverted text-shadow"> Nice to meet you</h3>
+                <h3 className="text-2xl md:text-4xl mb-16 section-heading section-heading--inverted"> Nice to meet you</h3>
                 <p className="text-md md:text-xl mb-4">
-                  I love hearing from new people and potential partners, so if you are looking for a reliable and creative developer,
-                  please get in touch below. I love to build in Gatsby, WordPress, Vue, React, and other platforms.
+                  I am a front-end developer, and I love to build projects in Gatsby, WordPress, Vue, React, and other platforms.
                 </p>
                 <p className="text-md md:text-xl">
-                  I am the founder of the micro-agency <a href="https://cascadia.digital">Cascadia Digital</a>, and you can also find me over on <a href="https://twitter.com/laroymike" className="text-blue hover:text-orange transition">twitter</a>.
+                  I am the founder of the micro-agency <a href="https://cascadia.digital" className="hover:text-orange transition">Cascadia Digital</a>, and you can also find me over on <a href="https://twitter.com/laroymike" className="text-blue hover:text-orange transition">twitter</a>.
                 </p>
               </div>
             </div>
           </Narrow>
         </Section>
-        <Section classes="bg-white">
+        {/* <Section classes="bg-white">
           <Narrow>
             <Work />
           </Narrow>
+        </Section> */}
+        {/* <Split left={left} right={right} /> */}
+
+        <Section>
+          <Narrow>
+            {left}
+          </Narrow>
         </Section>
-        <Split left={left} right={right} />
-        <Section classes="bg-white"  id="about">
+
+        <Section classes="bg-grey-lighter" id="about">
           <Narrow>
             <h2 className="text-2xl md:text-5xl section-heading">About</h2>
             <p className="text-base md:text-xl mt-4 mb-4">
@@ -108,12 +132,12 @@ class IndexPage extends Component {
             </p>
           </Narrow>
         </Section>
-        <Section classes="bg-grey-lighter">
+        <Section classes="bg-white">
           <Narrow>
             <LogoGarden />
           </Narrow>
         </Section>
-        <Section classes="bg-white" id="contact">
+        <Section classes="bg-grey-lighter" id="contact">
           <Narrow>
             <h2 className="text-2x md:text-5xl section-heading ">Contact</h2>
             <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch.</p>
@@ -128,7 +152,7 @@ class IndexPage extends Component {
 const splitLeft = () => {
   return (
     <Fragment>
-      <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted text-shadow">Latest thoughts</h3>
+      <h3 className="text-2xl md:text-4xl section-heading section-heading--inverted">Latest thoughts</h3>
       <LatestPost />
     </Fragment>
   );
