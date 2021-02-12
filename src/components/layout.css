@@ -62,7 +62,7 @@ footer a,
 .button {
   cursor: pointer;
   transition: all 0.2 ease;
-  @apply .px-8 .py-4 .rounded .bg-white .mt-4 .no-underline .inline-block .shadow .text-jp-indigo;
+  @apply .px-8 .py-4 .rounded .bg-white .mt-4 .no-underline .inline-block .shadow .text-blue;
 }
 
 .button:hover,
@@ -92,7 +92,7 @@ footer a,
 }
 
 .button-small.active {
-  @apply .bg-jp-indigo .text-white;
+  @apply .bg-blue .text-white;
 }
 
 .section-heading {
@@ -191,7 +191,7 @@ blockquote {
 .article-body blockquote:before,
 blockquote:before {
   content: '';
-  @apply .bg-jp-indigo .absolute .rounded;
+  @apply .bg-blue .absolute .rounded;
   width: 5px;
   height: 100%;
   left: 0;
@@ -215,7 +215,7 @@ blockquote p {
 }
 
 .article-body a {
-  @apply .text-jp-indigo;
+  @apply .text-blue;
 }
 
 .article-body a:hover,
