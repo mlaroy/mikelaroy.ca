@@ -5,7 +5,7 @@ const defaultContext = {
     toggleBodyClass: () => { console.log('set theme')},
 }
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext( defaultContext );
 
 export const ThemeProvider = ({ children }) => {
     const [isDark, setIsDark] = useState(false);
