@@ -97,7 +97,7 @@ const Layout = ({ children, description, title }) => (
             >
               <html lang="en" />
             </Helmet>
-            <div className="layout-grid bg-white">
+            <div className="layout-grid bg-1">
               <Header siteTitle={data.site.siteMetadata.title} />
               <main>
                 {children}

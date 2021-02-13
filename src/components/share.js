@@ -3,7 +3,7 @@ import getIcon from './icons';
 
 const share = props => {
   return (
-    <div>
+    <div className="share-links">
       <h3 className="mb-4">Share this: </h3>
       <a className="mr-4" href={getTwitterLink(props)} title="Share on Twitter" onClick={handleClick}>{getIcon('twitter')}</a>{' '}
       <a className="mr-4" href={getLinkedInLink(props)} title="Share on LinkedIn" onClick={handleClick}>{getIcon('linkedin')}</a>{' '}

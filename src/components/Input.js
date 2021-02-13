@@ -25,4 +25,4 @@ class Input extends Component {
 
 export default Input;
 
-const getHintLink = (hint, label) => <a href={hint} target="_blank" className="hover:text-orange text-blue">{label}</a>;
+const getHintLink = (hint, label) => <a href={hint} target="_blank" className="transition">{label}</a>;
