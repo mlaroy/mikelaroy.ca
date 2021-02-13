@@ -62,7 +62,7 @@ class postLayout extends Component {
               __html: html
             }}></div>
             <div className="my-8">
-              <Signature />
+              <Signature classes="signature" />
             </div>
             <div className="flex justify-between my-16">
               {previous && (

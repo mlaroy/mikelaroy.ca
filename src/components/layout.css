@@ -4,6 +4,45 @@
 
 @import url('https://fonts.googleapis.com/css?family=Copse|Roboto');
 
+:root {
+  /* light theme */
+  --background-1--light: #fff;
+  --text-1--light: #22292f;
+  --background-2--light: #f1f5f8;
+  --text-1--light: #22292f;
+  --link-1--light: #4F8ED6;
+  --link-1-hover--light: #f6993f;
+  --link-2--light: #4F8ED6;
+  --link-2-hover--light: #f6993f;
+
+
+  /* dark theme */
+  --background-1--dark: #242424;
+  --text-1--dark: #D5D5D5;
+  --link-1--dark: #f6993f;
+  --link-1-hover--dark: #4F8ED6;
+
+  --background-2--dark: rgb(95, 95, 95);
+  --text-2--dark: #fafafa;
+  --link-2--dark: #fafafa;
+  --link-2-hover--dark: #f6993f;
+
+   /* applying the vars */
+   --bg-1: var(--background-1--light);
+   --text-1: var(--text-1--light);
+   --link-1: var(--link-1--light);
+   --link-1-hover: var(--link-1-hover--light);
+
+   --bg-2: var(--background-2--light);
+   --text-2: var(--text-1--light);
+   --link-2: var(--link-2--light);
+   --link-2-hover: var(--link-2-hover--light);
+
+   --highlight: var(--link-1--light);
+   --signature: var(--text-1--light);
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,16 +51,110 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica,  serif;
-  @apply .text-black .leading-normal;
+  @apply .leading-normal;
+  color: var(--text-1);
 }
+
+.light-theme {
+  /* match initial setting */
+  --bg-1: var(--background-1--light);
+  --text-1: var(--text-1--light);
+  --link-1: var(--link-1--light);
+  --link-1-hover: var(--link-1-hover--light);
+
+  --bg-2: var(--background-2--light);
+  --text-2: var(--text-1--light);
+  --link-2: var(--link-2--light);
+  --link-2-hover: var(--link-2-hover--light);
+
+  --highlight: var(--link-1--light);
+  --signature: var(--text-1--light);
+}
+
+.dark-theme {
+  --bg-1: var(--background-1--dark);
+  --link-1: var(--link-1--dark);
+  --link-1-hover: var(--link-1-hover--dark);
+  --text-1: var(--text-1--dark);
+
+  --bg-2: var(--background-2--dark);
+  --link-2: var(--link-2--dark);
+  --link-2-hover: var(--link-2-hover--dark);
+  --text-2: var(--text-2--dark);
+
+  --highlight: var(--link-1--dark);
+  --signature: #fff;
+}
+
+/* @media (prefers-color-scheme: dark) {
+
+  --bg-1: var(--background-1--dark);
+  --link-1: var(--link-1--dark);
+  --link-1-hover: var(--link-1-hover--dark);
+  --text-1: var(--text-1--dark);
+
+  --bg-2: var(--background-2--dark);
+  --link-2: var(--link-2--dark);
+  --link-2-hover: var(--link-2-hover--dark);
+  --text-2: var(--text-2--dark);
+
+  --highlight: var(--link-1--dark);
+  --signature: #fff;
+
+  img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+} */
+
+.rss-icon path,
+.signature path {
+  fill: var(--signature);
+}
+
+a,
+.header-nav a {
+  color: var(--link-1);
+}
+
+.share-links a svg path,
+footer a svg path {
+  fill: var(--text-1);
+}
+
+.bg-1 {
+  background: var(--bg-1);
+  color: var(--text-1);
+}
+
+.bg-1 a {
+  color: var(--link-1);
+}
+.bg-1 a:hover {
+  color: var(--link-1-hover);
+}
+
+.bg-2 {
+  background: var(--bg-2);
+  color: var(--text-2);
+}
+
+/* .bg-2 a {
+  color: var(--link-2);
+}
+.bg-2 a:hover {
+  color: var(--link-2-hover);
+} */
+
+/* a:hover,
+footer a:hover,
+.header-nav a:hover {
+  color: var(--link-hover-color);
+} */
 
 h1, h2, h3 {
   font-family: 'Copse', Times New Roman, serif;
   font-weight: 200;
-}
-
-.text-shadow {
-  text-shadow: 0 1px 0 #555;
 }
 
 .layout-grid {
@@ -30,17 +163,7 @@ h1, h2, h3 {
   min-height: 100vh;
 }
 
-.site-logo {
-  /* padding: 1rem; */
-}
-
-a,
-footer a,
-.header-nav a {
-  @apply .text-blue;
-}
-
-.sticky-header {
+/* .sticky-header {
   width: 100vw;
   @apply .sticky;
   top: 0;
@@ -56,8 +179,13 @@ footer a,
   position: fixed;
   display: block;
   z-index: -1;
-}
+} */
 
+.sr-only {
+  position: absolute;
+  left: -400vw;
+  top: -100vh;
+}
 
 .button {
   cursor: pointer;
@@ -91,9 +219,9 @@ footer a,
   @apply .text-orange;
 }
 
-.button-small.active {
+/* .button-small.active {
   @apply .bg-blue .text-white;
-}
+} */
 
 .section-heading {
   position: relative;
@@ -108,7 +236,8 @@ footer a,
   width: 75px;
   height: 5px;
   display: block;
-  @apply .bg-blue .rounded;
+  @apply .rounded;
+  background: var(--highlight);
 }
 
 .text-center.section-heading:before {
@@ -118,7 +247,8 @@ footer a,
 
 .section-heading--inverted:before {
   content: '';
-  @apply .bg-blue .rounded;
+  @apply .rounded;
+  background: var(--highlight);
 }
 
 .bg-gradient {
@@ -191,8 +321,9 @@ blockquote {
 .article-body blockquote:before,
 blockquote:before {
   content: '';
-  @apply .bg-blue .absolute .rounded;
-  width: 5px;
+  @apply .absolute .rounded;
+  background: var(--highlight);
+  width: 5px;;
   height: 100%;
   left: 0;
   top: 0;
@@ -215,12 +346,12 @@ blockquote p {
 }
 
 .article-body a {
-  @apply .text-blue;
+  color: var(--link-1);
 }
 
 .article-body a:hover,
 .article-body a:focus {
-  @apply .text-orange;
+  color: var(--link-1-hover)
 }
 
 @media (min-width: 768px) {
@@ -244,8 +375,9 @@ blockquote p {
 }
 
 code {
-  @apply .px-2 .py-1 .text-sm .bg-grey-lighter .rounded;
+  @apply .px-2 .py-1 .text-sm .rounded;
   max-width: 100%;
+  background: var(--bg-1);
 }
 
 pre {

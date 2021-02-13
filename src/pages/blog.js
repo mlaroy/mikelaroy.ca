@@ -11,7 +11,7 @@ const Narrow = styled.div`
   max-width: 960px;
   margin: 0 auto;
   position: relative;
-  ${tw`px-8 py-8 h-full flex flex-col justify-center`};
+  ${tw`px-8 py-8 h-full flex flex-col justify-center container`};
 `
 
 const Success = props => (
@@ -26,8 +26,8 @@ const Success = props => (
           Blog
         </h1>
         <hr/>
-        <p className="text-sm mb-0 pt-12 md:absolute md:mr-4 pin-t pin-r">
-          <a href="https://mikelaroy.ca/rss.xml" className="text-blue no-underline">RSS {getIcon('rss', '10')}</a>
+        <p className="text-sm mb-0 pt-8 md:pt-12 md:absolute md:mr-4 pin-t pin-r">
+          <a href="https://mikelaroy.ca/rss.xml" className="no-underline rss-icon">RSS {getIcon('rss', '10')}</a>
         </p>
       </Narrow>
     </Section>

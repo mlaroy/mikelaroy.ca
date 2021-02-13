@@ -14,8 +14,9 @@ import sap from '../images/logos/sap-logo.png';
 
 const LogoGroup = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(max(125px), 1fr));
   grid-gap: 2rem;
+  margin: 0 auto;
 `
 
 const LogoGarden = () => {
