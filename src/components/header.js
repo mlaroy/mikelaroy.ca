@@ -6,6 +6,7 @@ import Signature from './signature'
 const Header = ({ siteTitle }) => {
 
   const { toggleBodyClass, isDark } = useContext( ThemeContext );
+  const buttonText = isDark ? 'Set light theme' : 'Set dark theme';
 
   return (
     <header className="w-full bg-1">
@@ -20,9 +21,12 @@ const Header = ({ siteTitle }) => {
               <CustomLink to="/#about" classes="self-center" external="false">About</CustomLink>
               <CustomLink to="/blog" classes="self-center ml-4" external="false">Blog</CustomLink>
               <CustomLink to="/#contact" classes="self-center ml-4" external="false">Contact</CustomLink>
-              <button className="self-center ml-4 px-2 py-1 text-sm rounded" onClick={() => toggleBodyClass(!isDark)}>
-                {isDark ? '☀️ ' : '🌙'}
-                <span className="sr-only">{isDark ? 'Set light theme' : 'Set dark theme'}</span>
+              <button
+                className="self-center ml-4 px-2 py-1 text-sm rounded"
+                onClick={() => toggleBodyClass(!isDark)}
+                title={buttonText}>
+                  {isDark ? '☀️ ' : '🌙'}
+                  <span className="sr-only">{buttonText}</span>
               </button>
             </nav>
           </div>
