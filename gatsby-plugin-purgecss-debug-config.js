@@ -8,13 +8,12 @@
      publicPath: '/' },
   module:
    { rules:
-      [ { test: /\.mjs$/,
-          include: /node_modules/,
-          type: 'javascript/auto' },
-        { test: /\.jsx?$/,
-          exclude: /(node_modules|bower_components)/,
+      [ { test: /\.(js|mjs|jsx)$/,
+          include: [Function: include],
+          type: 'javascript/auto',
           use:
-           [ { options: {},
+           [ { options:
+                { stage: 'build-javascript', configFile: true, compact: true },
                loader:
                 '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/utils/babel-loader.js' } ] },
         { test: /\.ya?ml/,
@@ -39,16 +38,36 @@
            [ { loader:
                 '/Users/mlaroy/Sites/mikelaroy/node_modules/url-loader/dist/cjs.js',
                options: { limit: 10000, name: 'static/[name]-[hash].[ext]' } } ],
-          test: /\.(mp4|webm|wav|mp3|m4a|aac|oga|flac)$/ },
+          test: /\.(mp4|webm|ogv|wav|mp3|m4a|aac|oga|flac)$/ },
         { use:
            [ { loader:
                 '/Users/mlaroy/Sites/mikelaroy/node_modules/file-loader/dist/cjs.js',
                options: { name: 'static/[name]-[hash].[ext]' } } ],
           test: /\.pdf$/ },
+        { test:
+           '/Users/mlaroy/Sites/mikelaroy/node_modules/@reach/router/es/index.js',
+          type: 'javascript/auto',
+          use:
+           [ { loader:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/utils/reach-router-add-basecontext-export-loader.js' } ] },
+        { test: /\.(js|mjs)$/,
+          exclude: [Function: exclude],
+          type: 'javascript/auto',
+          use:
+           [ { options:
+                { babelrc: false,
+                  configFile: false,
+                  compact: false,
+                  presets:
+                   [ '/Users/mlaroy/Sites/mikelaroy/node_modules/babel-preset-gatsby/dependencies.js' ],
+                  sourceMaps: false,
+                  cacheIdentifier: 'build-javascript---gatsby-dependencies@0.2.26' },
+               loader:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/babel-loader/lib/index.js' } ] },
         { oneOf:
            [ { test: /\.module\.css$/,
                use:
-                [ { options: {},
+                [ { options: { hmr: false },
                     loader:
                      '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js' },
                   { loader:
@@ -57,8 +76,8 @@
                      { sourceMap: false,
                        camelCase: 'dashesOnly',
                        localIdentName: '[name]--[local]--[hash:base64:5]',
-                       modules: true,
-                       importLoaders: 1 } },
+                       importLoaders: 1,
+                       modules: true } },
                   { loader:
                      '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-postcss/node_modules/postcss-loader/src/index.js',
                     options: { sourceMap: false } } ] },
@@ -78,7 +97,7 @@
                      '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-postcss/node_modules/postcss-loader/src/index.js',
                     options: { sourceMap: false } } ] },
              { use:
-                [ { options: {},
+                [ { options: { hmr: false },
                     loader:
                      '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js' },
                   { loader:
@@ -94,10 +113,11 @@
                     options:
                      { ident: 'postcss-1',
                        sourceMap: false,
-                       plugins: [Function: plugins] } } ],
+                       plugins: [Function: plugins],
+                       browsers: undefined } } ],
                test: /\.module\.css$/ },
              { use:
-                [ { options: {},
+                [ { options: { hmr: false },
                     loader:
                      '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js' },
                   { loader:
@@ -112,7 +132,8 @@
                     options:
                      { ident: 'postcss-2',
                        sourceMap: false,
-                       plugins: [Function: plugins] } } ],
+                       plugins: [Function: plugins],
+                       browsers: undefined } } ],
                test: /\.css$/ } ] },
         { test: /\.css$/,
           use:
@@ -141,13 +162,21 @@
           'process.env.NODE_ENV': '"production"',
           'process.env.PUBLIC_DIR': '"/Users/mlaroy/Sites/mikelaroy/public"',
           'process.env.BUILD_STAGE': '"build-javascript"',
+          'process.env.CYPRESS_SUPPORT': undefined,
+          'process.env.GATSBY_LOGGER': '"ink"',
           'process.env.GATSBY_BUILD_STAGE': '"build-javascript"',
-          __PATH_PREFIX__: '""' } },
+          __BASE_PATH__: '""',
+          __PATH_PREFIX__: '""',
+          __ASSET_PREFIX__: '""' } },
      MiniCssExtractPlugin {
        options:
         { filename: '[name].[contenthash].css',
+          moduleFilename: [Function: moduleFilename],
+          ignoreOrder: false,
           chunkFilename: '[name].[contenthash].css' } },
-     { apply: [Function: apply] } ],
+     GatsbyWebpackStatsExtractor { plugin: { name: 'GatsbyWebpackStatsExtractor' }, options: {} },
+     DefinePlugin {
+       definitions: { __MANIFEST_PLUGIN_HAS_LOCALISATION__: undefined } } ],
   target: 'web',
   devtool: 'source-map',
   performance: { hints: false },
@@ -156,11 +185,10 @@
    { modules:
       [ '/Users/mlaroy/Sites/mikelaroy/node_modules',
         '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/loaders',
-        'node_modules' ] },
+        'node_modules' ],
+     plugins: [ { apply: [Function: nothing] } ] },
   resolve:
    { extensions: [ '.mjs', '.js', '.jsx', '.wasm', '.json' ],
-     modules:
-      [ '/Users/mlaroy/Sites/mikelaroy/node_modules', 'node_modules' ],
      alias:
       { 'gatsby$':
          '/Users/mlaroy/Sites/mikelaroy/.cache/gatsby-browser-entry.js',
@@ -171,15 +199,184 @@
         'react-lifecycles-compat':
          '/Users/mlaroy/Sites/mikelaroy/.cache/react-lifecycles-compat.js',
         'create-react-context':
-         '/Users/mlaroy/Sites/mikelaroy/.cache/create-react-context.js' } },
+         '/Users/mlaroy/Sites/mikelaroy/.cache/create-react-context.js',
+        '@reach/router':
+         '/Users/mlaroy/Sites/mikelaroy/node_modules/@reach/router/es' },
+     plugins:
+      [ { apply: [Function: nothing] },
+        { apply: [Function: nothing] },
+        { apply: [Function: nothing],
+          makePlugin: [Function],
+          moduleLoader: [Function],
+          topLevelLoader: { apply: [Function: nothing] },
+          bind: [Function],
+          tsLoaderOptions: [Function],
+          forkTsCheckerOptions: [Function] },
+        GatsbyThemeComponentShadowingResolverPlugin {
+          cache: {},
+          themes:
+           [ { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/dev-404-page',
+               themeName: 'dev-404-page' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/load-babel-config',
+               themeName: 'load-babel-config' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/internal-data-bridge',
+               themeName: 'internal-data-bridge' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/prod-404',
+               themeName: 'prod-404' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/webpack-theme-component-shadowing',
+               themeName: 'webpack-theme-component-shadowing' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-react-helmet',
+               themeName: 'gatsby-plugin-react-helmet' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-postcss',
+               themeName: 'gatsby-plugin-postcss' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-tailwindcss',
+               themeName: 'gatsby-plugin-tailwindcss' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-styled-components',
+               themeName: 'gatsby-plugin-styled-components' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-source-filesystem',
+               themeName: 'gatsby-source-filesystem' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-source-filesystem',
+               themeName: 'gatsby-source-filesystem' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-transformer-sharp',
+               themeName: 'gatsby-transformer-sharp' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-sharp',
+               themeName: 'gatsby-plugin-sharp' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-manifest',
+               themeName: 'gatsby-plugin-manifest' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-transformer-remark',
+               themeName: 'gatsby-transformer-remark' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-remark-images',
+               themeName: 'gatsby-remark-images' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/@weknow/gatsby-remark-twitter',
+               themeName: '@weknow/gatsby-remark-twitter' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-remark-prismjs',
+               themeName: 'gatsby-remark-prismjs' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-catch-links',
+               themeName: 'gatsby-plugin-catch-links' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-purgecss',
+               themeName: 'gatsby-plugin-purgecss' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-google-analytics',
+               themeName: 'gatsby-plugin-google-analytics' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-feed',
+               themeName: 'gatsby-plugin-feed' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-netlify',
+               themeName: 'gatsby-plugin-netlify' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' },
+             { themeDir: '/Users/mlaroy/Sites/mikelaroy',
+               themeName: 'default-site-plugin' },
+             { themeDir:
+                '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+               themeName: 'gatsby-plugin-page-creator' } ],
+          projectRoot: '/Users/mlaroy/Sites/mikelaroy',
+          extensions: [ '.mjs', '.js', '.jsx', '.wasm', '.json' ] } ] },
   node: { __filename: true },
   optimization:
    { runtimeChunk: { name: 'webpack-runtime' },
-     splitChunks: { name: false },
+     moduleIds: 'hashed',
+     splitChunks:
+      { name: false,
+        chunks: 'all',
+        cacheGroups:
+         { default: false,
+           vendors: false,
+           commons: { name: 'commons', chunks: 'all', minChunks: 2.5 },
+           react:
+            { name: 'commons',
+              chunks: 'all',
+              test: /[\\\/]node_modules[\\\/](react|react-dom|scheduler)[\\\/]/ },
+           styles:
+            { name: 'styles',
+              test: /\.(css|scss|sass|less|styl)$/,
+              chunks: 'all',
+              enforce: true,
+              priority: 10 } } },
      minimizer:
       [ TerserPlugin {
           options:
-           { test: /\.js(\?.*)?$/i,
+           { test: /\.m?js(\?.*)?$/i,
+             chunkFilter: [Function: chunkFilter],
              warningsFilter: [Function: warningsFilter],
              extractComments: false,
              sourceMap: true,
@@ -192,6 +389,7 @@
              terserOptions:
               { output: { ecma: 5 },
                 ie8: false,
+                mangle: { safari10: true },
                 parse: { ecma: 8 },
                 compress: { ecma: 5 } } } },
         OptimizeCssAssetsWebpackPlugin {
@@ -199,17 +397,67 @@
           options:
            { assetProcessors:
               [ { phase: 'compilation.optimize-chunk-assets',
-                  regExp: /\.css$/g,
+                  regExp: /\.css(\?.*)?$/i,
                   processor: [Function: processor] } ],
              canPrint: undefined,
-             assetNameRegExp: /\.css$/g,
+             assetNameRegExp: /\.css(\?.*)?$/i,
              cssProcessor: { [Function: creator] process: [Function] },
              cssProcessorOptions: {},
-             cssProcessorPluginOptions: {} },
+             cssProcessorPluginOptions:
+              { preset:
+                 [ 'default',
+                   { svgo:
+                      { full: true,
+                        plugins:
+                         [ { removeUselessDefs: true,
+                             addAttributesToSVGElement: true,
+                             addClassesToSVGElement: true,
+                             cleanupAttrs: true,
+                             cleanupEnableBackground: true,
+                             cleanupIDs: true,
+                             cleanupListOfValues: true,
+                             cleanupNumericValues: true,
+                             collapseGroups: true,
+                             convertColors: true,
+                             convertPathData: true,
+                             convertStyleToAttrs: true,
+                             convertTransform: true,
+                             inlineStyles: true,
+                             mergePaths: true,
+                             minifyStyles: true,
+                             moveElemsAttrsToGroup: true,
+                             moveGroupAttrsToElems: true,
+                             prefixIds: true,
+                             removeAttributesBySelector: true,
+                             removeAttrs: true,
+                             removeComments: true,
+                             removeDesc: true,
+                             removeDimensions: true,
+                             removeDoctype: true,
+                             removeEditorsNSData: true,
+                             removeElementsByAttr: true,
+                             removeEmptyAttrs: true,
+                             removeEmptyContainers: true,
+                             removeEmptyText: true,
+                             removeHiddenElems: true,
+                             removeMetadata: true,
+                             removeNonInheritableGroupAttrs: true,
+                             removeOffCanvasPaths: true,
+                             removeRasterImages: true,
+                             removeScriptElement: true,
+                             removeStyleElement: true,
+                             removeTitle: true,
+                             removeUnknownsAndDefaults: true,
+                             removeUnusedNS: true,
+                             removeUselessStrokeAndFill: true,
+                             removeXMLNS: true,
+                             removeXMLProcInst: true,
+                             reusePaths: true,
+                             sortAttrs: true } ] } } ] } },
           phaseAssetProcessors:
            { 'compilation.optimize-chunk-assets':
               [ { phase: 'compilation.optimize-chunk-assets',
-                  regExp: /\.css$/g,
+                  regExp: /\.css(\?.*)?$/i,
                   processor: [Function: processor] } ],
              'compilation.optimize-assets': [],
              emit: [] },
