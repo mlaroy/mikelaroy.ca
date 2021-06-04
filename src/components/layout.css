@@ -2,7 +2,7 @@
 
 @tailwind components;
 
-@import url('https://fonts.googleapis.com/css?family=Copse|Roboto');
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Text|Red+Hat+Text');
 
 :root {
   /* light theme */
@@ -50,7 +50,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica,  serif;
+  font-family: 'Red Hat Text', 'Helvetica Neue', Helvetica,  serif;
   @apply .leading-normal;
   color: var(--text-1);
 }
@@ -153,8 +153,8 @@ footer a:hover,
 } */
 
 h1, h2, h3 {
-  font-family: 'Copse', Times New Roman, serif;
-  font-weight: 200;
+  font-family: 'DM Serif Text', Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-weight: 400;
 }
 
 .layout-grid {

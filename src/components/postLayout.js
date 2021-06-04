@@ -8,6 +8,7 @@ import Section from './Section';
 import Signature from './signature';
 import Helmet from 'react-helmet';
 import Share from './share';
+import CascadiaCallout from './CascadiaCallout';
 
 const Narrow = styled.div`
   max-width: 960px;
@@ -84,6 +85,9 @@ class postLayout extends Component {
             {/* <div className="my-8">
               <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
             </div> */}
+            <div className="my-8">
+              <CascadiaCallout width="full" />
+            </div>
           </Narrow>
         </Section>
       </Layout>
