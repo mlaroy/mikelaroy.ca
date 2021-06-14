@@ -54,7 +54,7 @@ class postLayout extends Component {
         </Helmet>
         <Section css="container">
           <Narrow>
-            <h1 className="text-3xl md:text-5xl section-heading">{title}</h1>
+            <h1 className="text-3xl md:text-5xl section-heading mt-16">{title}</h1>
             <p className="pb-4 text-sm">
               <time className="inline-block pr-4">{date}</time> | <span className="inline-block pl-4">Read time: {timeToRead} min</span>
             </p>

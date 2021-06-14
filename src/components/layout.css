@@ -413,5 +413,9 @@ pre {
   filter: grayscale(100%);
 }
 
+.input-bg {
+  background: var(--background-2--light);
+}
+
 
 @tailwind utilities;

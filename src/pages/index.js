@@ -115,12 +115,12 @@ class IndexPage extends Component {
             </p>
           </Narrow>
         </Section>
-        <Section classes="bg-1">
+        {/* <Section classes="bg-1">
           <Narrow>
             <LogoGarden />
           </Narrow>
-        </Section>
-        <Section classes="bg-2" id="contact">
+        </Section> */}
+        <Section classes="bg-1" id="contact">
           <Narrow>
             <h2 className="text-2x md:text-5xl section-heading ">Contact</h2>
             <p className="text-base md:text-xl mt-4 mb-4">For rates, engagements, or questions, get in touch.</p>
