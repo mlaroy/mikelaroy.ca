@@ -12,7 +12,7 @@ class Footer extends Component {
     const year = thisYear();
 
     return (
-      <footer className="container bg-1">
+      <footer className="bg-2">
         <div className="w-full container">
           <button
             type="button"

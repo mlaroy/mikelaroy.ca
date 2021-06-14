@@ -22,7 +22,7 @@ const Success = props => (
     </Helmet>
     <Section css="container">
       <Narrow>
-        <h1 className="text-3xl md:text-5xl mb-4 section-heading">
+        <h1 className="text-3xl md:text-5xl mb-4 section-heading mt-12">
           Blog
         </h1>
         <hr/>
