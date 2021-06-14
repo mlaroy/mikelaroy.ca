@@ -285,7 +285,7 @@ h1, h2, h3 {
 }
 
 .article-body h3 {
-  @apply .uppercase .text-lg;
+  @apply .text-xl;
 }
 
 .article-body p + h2,
