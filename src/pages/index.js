@@ -12,7 +12,9 @@ import Work from '../components/Work'
 import CustomLink from '../components/CustomLink';
 import LogoGarden from '../components/LogoGarden';
 import portrait from '../images/portrait.jpg';
-import portrait_square from '../images/portrait-square.jpg';
+// import portrait_square from '../images/portrait-square.jpg';
+import headshot_square from '../images/headshot.jpg';
+import headshot from '../images/headshot_large.jpg';
 import CascadiaCallout from '../components/CascadiaCallout';
 
 const Narrow = styled.div`
@@ -59,8 +61,8 @@ class IndexPage extends Component {
             <div className="flex flex-col sm:flex-row">
               <div className="w-full sm:w-1/3 max-w-xs flex flex-col justify-center">
                 <picture>
-                  <source srcSet={portrait} media="(min-width: 768px)" />
-                  <img src={portrait_square} alt="Michael LaRoy" className="block shadow-lg rounded"/>
+                  <source srcSet={headshot} media="(min-width: 768px)" />
+                  <img src={headshot_square} alt="Michael LaRoy" className="block shadow-lg rounded"/>
                 </picture>
               </div>
               <div className="w-full sm:w-2/3 mt-16 sm:mt-0 sm:ml-16 md:ml-32 flex flex-col justify-center">
