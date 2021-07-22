@@ -24,11 +24,11 @@ Aside from a traditional, PHP-focused WordPress developer needing to add some Ja
 
 ## Enter ACF Pro
 
-The Pro version of Advanced Custom Fields provides a [solution to this problem](https://www.advancedcustomfields.com/resources/blocks/). By providing a PHP solution to block creation, a developer already familiar with ACF can efficiently create new custom blocks without writing any JavaScript. In a similar way he might register a new custom post type, the developer can leverage some new ACF function to register new blocks, with all of the requisite configuration options.
+The Pro version of Advanced Custom Fields provides a [solution to this problem](https://www.advancedcustomfields.com/resources/blocks/). By providing a PHP solution to block creation, a developer already familiar with ACF can efficiently create new custom blocks without writing any JavaScript. In a similar way to registering a new custom post type, the developer can leverage some new ACF function to register new blocks, with all of the requisite configuration options.
 
 Further, he can use the familiar `get_field()` and similar familiar functions that ACF provides for fetching data from a custom field.
 
-In addition, it follows the Block Editor convention of saving the content to the WordPress "content" area, rather than saving the custom fields content as post meta like in _traditional_ ACF fashion. In this way, custom blocks can be combined with default blocks, or blocks provided by a plugin, to achieve a high level of complexity with a huge amount of flexibility.
+In addition, it follows the Block Editor convention of saving the content to the WordPress "content" area, rather than saving the custom fields content as post meta like in traditional ACF fashion. In this way, custom blocks can be combined with default blocks, or blocks provided by a plugin, to achieve a high level of complexity with a huge amount of flexibility.
 
 ## Block Development in Practice: Roots Sage
 
@@ -109,7 +109,7 @@ namespace App\View\Composers;
 
 ```
 
-If I want, I could get all of my fields individually, and pass return them as separate items in that array. This is a great approach if I need to massage data in a particular way. Finally, the view template, found in the `resources/views/blocks/hero.blade.php` file, as indicated by the `blocks.hero` part of this file:
+If I want, I could get all of my fields individually, and return them as separate items in that array. This is a great approach if I need to massage data in a particular way before sending it to the view. Finally, the view template, found in the `resources/views/blocks/hero.blade.php` file, as indicated by the `blocks.hero` part of this file:
 
 ```php
 <div class="hero-block">
@@ -144,7 +144,7 @@ add_action('acf/init', function () {
 });
 ```
 
-Your render function would handle all of the data handling that in the previous example was handled by the global callback, in combination with the composer file. That function should follow more closely how a render function is described in the WordPress docs, and might look like this:
+Your render function would handle all of the block-specific things that in the previous example was handled by the global callback, in combination with the data added via the composer file. This function should follow more closely how a render function is described in the WordPress docs, and might look like this:
 
 ```php
 function render_hero_block( $block, $content = '', $is_preview = false, $post_id = 0 ) {
@@ -176,7 +176,7 @@ Finally, my view template being referenced by the WordPress function `get_templa
 </div>
 ```
 
-The advantage to using a render callback fuction over calling the template directly, which ACF allows for, is that the template can be re-usable. So long as the function calling formats the data in the same way, this template can be totally portable.
+The advantage to using a render callback fuction over calling the template directly, which ACF allows for, is that the template can be re-usable. So long as the function calling the template presents the data formatted in the same way, this template can be totally portable.
 
 ## Wrapping It Up
 
