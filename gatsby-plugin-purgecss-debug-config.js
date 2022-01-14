@@ -1,6 +1,9 @@
 {
   context: '/Users/mlaroy/Sites/mikelaroy',
-  entry: { app: '/Users/mlaroy/Sites/mikelaroy/.cache/production-app' },
+  entry: {
+    polyfill: '/Users/mlaroy/Sites/mikelaroy/.cache/polyfill-entry',
+    app: '/Users/mlaroy/Sites/mikelaroy/.cache/production-app'
+  },
   output: {
     filename: '[name]-[contenthash].js',
     chunkFilename: '[name]-[contenthash].js',
@@ -17,15 +20,18 @@
           {
             options: {
               stage: 'build-javascript',
+              reactRuntime: 'classic',
+              cacheDirectory: '/Users/mlaroy/Sites/mikelaroy/.cache/webpack/babel',
               configFile: true,
-              compact: true
+              compact: true,
+              rootDir: '/Users/mlaroy/Sites/mikelaroy'
             },
             loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/utils/babel-loader.js'
           }
         ]
       },
       {
-        test: /\.ya?ml/,
+        test: /\.ya?ml$/,
         use: [
           {
             options: {},
@@ -41,7 +47,11 @@
         use: [
           {
             loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/url-loader/dist/cjs.js',
-            options: { limit: 10000, name: 'static/[name]-[hash].[ext]' }
+            options: {
+              limit: 10000,
+              name: 'static/[name]-[hash].[ext]',
+              fallback: '/Users/mlaroy/Sites/mikelaroy/node_modules/file-loader/dist/cjs.js'
+            }
           }
         ],
         test: /\.(eot|otf|ttf|woff(2)?)(\?.*)?$/
@@ -50,16 +60,24 @@
         use: [
           {
             loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/url-loader/dist/cjs.js',
-            options: { limit: 10000, name: 'static/[name]-[hash].[ext]' }
+            options: {
+              limit: 10000,
+              name: 'static/[name]-[hash].[ext]',
+              fallback: '/Users/mlaroy/Sites/mikelaroy/node_modules/file-loader/dist/cjs.js'
+            }
           }
         ],
-        test: /\.(ico|svg|jpg|jpeg|png|gif|webp)(\?.*)?$/
+        test: /\.(ico|svg|jpg|jpeg|png|gif|webp|avif)(\?.*)?$/
       },
       {
         use: [
           {
             loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/url-loader/dist/cjs.js',
-            options: { limit: 10000, name: 'static/[name]-[hash].[ext]' }
+            options: {
+              limit: 10000,
+              name: 'static/[name]-[hash].[ext]',
+              fallback: '/Users/mlaroy/Sites/mikelaroy/node_modules/file-loader/dist/cjs.js'
+            }
           }
         ],
         test: /\.(mp4|webm|ogv|wav|mp3|m4a|aac|oga|flac)$/
@@ -89,14 +107,18 @@
         use: [
           {
             options: {
+              cacheDirectory: '/Users/mlaroy/Sites/mikelaroy/.cache/webpack/babel',
               babelrc: false,
               configFile: false,
               compact: false,
               presets: [
-                '/Users/mlaroy/Sites/mikelaroy/node_modules/babel-preset-gatsby/dependencies.js'
+                [
+                  '/Users/mlaroy/Sites/mikelaroy/node_modules/babel-preset-gatsby/dependencies.js',
+                  { stage: 'build-javascript' }
+                ]
               ],
               sourceMaps: false,
-              cacheIdentifier: 'build-javascript---gatsby-dependencies@0.2.26'
+              cacheIdentifier: '{"browerslist":[">0.25%","not dead"],"gatsbyPreset":"0.12.3"}'
             },
             loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/babel-loader/lib/index.js'
           }
@@ -108,8 +130,8 @@
             test: /\.module\.css$/,
             use: [
               {
-                options: { hmr: false },
-                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js'
+                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js',
+                options: { hmr: false }
               },
               {
                 loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/css-loader/index.js',
@@ -122,7 +144,7 @@
                 }
               },
               {
-                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-postcss/node_modules/postcss-loader/src/index.js',
+                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/postcss-loader/src/index.js',
                 options: { sourceMap: false }
               }
             ]
@@ -131,8 +153,8 @@
             test: /\.css$/,
             use: [
               {
-                options: {},
-                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js'
+                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js',
+                options: {}
               },
               {
                 loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/css-loader/index.js',
@@ -144,7 +166,7 @@
                 }
               },
               {
-                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-postcss/node_modules/postcss-loader/src/index.js',
+                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/postcss-loader/src/index.js',
                 options: { sourceMap: false }
               }
             ]
@@ -152,8 +174,8 @@
           {
             use: [
               {
-                options: { hmr: false },
-                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js'
+                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js',
+                options: { hmr: false }
               },
               {
                 loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/css-loader/index.js',
@@ -166,7 +188,7 @@
                 }
               },
               {
-                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/postcss-loader/lib/index.js',
+                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/postcss-loader/src/index.js',
                 options: {
                   ident: 'postcss-1',
                   sourceMap: false,
@@ -180,8 +202,8 @@
           {
             use: [
               {
-                options: { hmr: false },
-                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js'
+                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/mini-css-extract-plugin/dist/loader.js',
+                options: { hmr: false }
               },
               {
                 loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/css-loader/index.js',
@@ -193,7 +215,7 @@
                 }
               },
               {
-                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/postcss-loader/lib/index.js',
+                loader: '/Users/mlaroy/Sites/mikelaroy/node_modules/postcss-loader/src/index.js',
                 options: {
                   ident: 'postcss-2',
                   sourceMap: false,
@@ -241,18 +263,21 @@
     },
     DefinePlugin {
       definitions: {
-        'process.env': '{}',
+        'process.env': '({})',
         'process.env.NODE_ENV': '"production"',
         'process.env.PUBLIC_DIR': '"/Users/mlaroy/Sites/mikelaroy/public"',
         'process.env.BUILD_STAGE': '"build-javascript"',
         'process.env.CYPRESS_SUPPORT': undefined,
+        'process.env.GATSBY_EXPERIMENTAL_QUERY_ON_DEMAND': 'false',
         'process.env.GATSBY_LOGGER': '"ink"',
+        'process.env.GATSBY_HOT_LOADER': '"react-hot-loader"',
         'process.env.GATSBY_BUILD_STAGE': '"build-javascript"',
         __BASE_PATH__: '""',
         __PATH_PREFIX__: '""',
         __ASSET_PREFIX__: '""'
       }
     },
+    GatsbyWebpackVirtualModules {},
     MiniCssExtractPlugin {
       options: {
         filename: '[name].[contenthash].css',
@@ -262,8 +287,7 @@
       }
     },
     GatsbyWebpackStatsExtractor {
-      plugin: { name: 'GatsbyWebpackStatsExtractor' },
-      options: {}
+      plugin: { name: 'GatsbyWebpackStatsExtractor' }
     },
     DefinePlugin {
       definitions: { __MANIFEST_PLUGIN_HAS_LOCALISATION__: undefined }
@@ -282,15 +306,30 @@
     plugins: [ { apply: [Function: nothing] } ]
   },
   resolve: {
-    extensions: [ '.mjs', '.js', '.jsx', '.wasm', '.json' ],
+    extensions: [
+      '.mjs',  '.js',
+      '.jsx',  '.wasm',
+      '.json', '.ts',
+      '.tsx'
+    ],
     alias: {
+      '@reach/router': '/Users/mlaroy/Sites/mikelaroy/node_modules/@reach/router/es',
       'gatsby$': '/Users/mlaroy/Sites/mikelaroy/.cache/gatsby-browser-entry.js',
       '@babel/runtime': '/Users/mlaroy/Sites/mikelaroy/node_modules/@babel/runtime',
-      'core-js': '/Users/mlaroy/Sites/mikelaroy/node_modules/core-js',
       'react-hot-loader': '/Users/mlaroy/Sites/mikelaroy/node_modules/react-hot-loader',
       'react-lifecycles-compat': '/Users/mlaroy/Sites/mikelaroy/.cache/react-lifecycles-compat.js',
       'create-react-context': '/Users/mlaroy/Sites/mikelaroy/.cache/create-react-context.js',
-      '@reach/router': '/Users/mlaroy/Sites/mikelaroy/node_modules/@reach/router/es'
+      '@pmmmwh/react-refresh-webpack-plugin': '/Users/mlaroy/Sites/mikelaroy/node_modules/@pmmmwh/react-refresh-webpack-plugin',
+      'socket.io-client': '/Users/mlaroy/Sites/mikelaroy/node_modules/socket.io-client',
+      '$virtual': '/Users/mlaroy/Sites/mikelaroy/.cache/_this_is_virtual_fs_path_/$virtual',
+      'object.assign': '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations/polyfills/object-assign.js',
+      'object-assign$': '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations/polyfills/object-assign.js',
+      '@babel/runtime/helpers/extends.js$': '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations/polyfills/object-assign.js',
+      'unfetch$': '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations/polyfills/fetch.js',
+      'unfetch/polyfill$': '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations/polyfills/no-op.js',
+      'isomorphic-unfetch$': '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations/polyfills/fetch.js',
+      'whatwg-fetch$': '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations/polyfills/whatwg-fetch.js',
+      'url-polyfill$': '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations/polyfills/no-op.js'
     },
     plugins: [
       { apply: [Function: nothing] },
@@ -303,6 +342,9 @@
         bind: [Function (anonymous)],
         tsLoaderOptions: [Function (anonymous)],
         forkTsCheckerOptions: [Function (anonymous)]
+      },
+      CoreJSResolver {
+        _coreJSNodeModulesPath: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/node_modules'
       },
       GatsbyThemeComponentShadowingResolverPlugin {
         cache: {},
@@ -326,6 +368,10 @@
           {
             themeDir: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/webpack-theme-component-shadowing',
             themeName: 'webpack-theme-component-shadowing'
+          },
+          {
+            themeDir: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby/dist/internal-plugins/bundle-optimisations',
+            themeName: 'bundle-optimisations'
           },
           {
             themeDir: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-react-helmet',
@@ -480,6 +526,14 @@
             themeName: 'gatsby-plugin-page-creator'
           },
           {
+            themeDir: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-page-creator',
+            themeName: 'gatsby-plugin-page-creator'
+          },
+          {
+            themeDir: '/Users/mlaroy/Sites/mikelaroy/node_modules/gatsby-plugin-typescript',
+            themeName: 'gatsby-plugin-typescript'
+          },
+          {
             themeDir: '/Users/mlaroy/Sites/mikelaroy',
             themeName: 'default-site-plugin'
           },
@@ -489,7 +543,12 @@
           }
         ],
         projectRoot: '/Users/mlaroy/Sites/mikelaroy',
-        extensions: [ '.mjs', '.js', '.jsx', '.wasm', '.json' ]
+        extensions: [
+          '.mjs',  '.js',
+          '.jsx',  '.wasm',
+          '.json', '.ts',
+          '.tsx'
+        ]
       }
     ]
   },
@@ -498,25 +557,42 @@
     runtimeChunk: { name: 'webpack-runtime' },
     moduleIds: 'hashed',
     splitChunks: {
-      name: false,
       chunks: 'all',
       cacheGroups: {
         default: false,
         vendors: false,
-        commons: { name: 'commons', chunks: 'all', minChunks: 2.5 },
-        react: {
-          name: 'commons',
+        framework: {
           chunks: 'all',
-          test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/
+          name: 'framework',
+          test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler|prop-types)[\\/]/,
+          priority: 40,
+          enforce: true
+        },
+        lib: {
+          test: [Function: test],
+          name: [Function: name],
+          priority: 30,
+          minChunks: 1,
+          reuseExistingChunk: true
+        },
+        commons: { name: 'commons', minChunks: 5, priority: 20 },
+        shared: {
+          test: [Function: test],
+          name: [Function: name],
+          priority: 10,
+          minChunks: 2,
+          reuseExistingChunk: true
         },
         styles: {
+          test: [Function: test],
           name: 'styles',
-          test: /\.(css|scss|sass|less|styl)$/,
-          chunks: 'all',
-          enforce: true,
-          priority: 10
+          priority: 40,
+          enforce: true
         }
-      }
+      },
+      maxAsyncRequests: Infinity,
+      maxInitialRequests: 25,
+      minSize: 20000
     },
     minimizer: [
       TerserPlugin {
@@ -524,20 +600,20 @@
           test: /\.m?js(\?.*)?$/i,
           chunkFilter: [Function: chunkFilter],
           warningsFilter: [Function: warningsFilter],
-          extractComments: false,
+          extractComments: true,
           sourceMap: true,
-          cache: true,
+          cache: '/Users/mlaroy/Sites/mikelaroy/.cache/webpack/terser',
           cacheKeys: [Function: cacheKeys],
           parallel: true,
           include: undefined,
           exclude: /\.min\.js/,
           minify: undefined,
           terserOptions: {
-            output: { ecma: 5 },
             ie8: false,
             mangle: { safari10: true },
             parse: { ecma: 8 },
-            compress: { ecma: 5 }
+            compress: { ecma: 5 },
+            output: { ecma: 5 }
           }
         }
       },
