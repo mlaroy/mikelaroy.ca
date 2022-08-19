@@ -47,7 +47,7 @@ class IndexPage extends Component {
         <header className="pt-12 md:py-24 sm:mb-8 container md:flex bg-1">
           <div className="p-8 md:pl-4 md:pr-16 md:w-1/2 flex flex-col justify-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl leading-tight">
-              Hi, I’m <span className="text-blue">Michael LaRoy</span>, <br className="hidden md:block" />
+              Hi, I’m <span className="text-name">Michael LaRoy</span>, <br className="hidden md:block" />
               a web development consultant in
               Abbotsford, British Columbia
               <span className="text-sm block font-normal mt-2"> (that's near Vancouver) </span>

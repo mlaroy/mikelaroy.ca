@@ -4,8 +4,8 @@ import { capitalize } from '../utilities/helpers';
 class Input extends Component {
   render() {
     const { value, name, onChange, required = false, label = false, type = 'text', hint = false } = this.props;
-    const inputClass = 'shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline input-bg';
-    const buttonClass = 'button';
+    const inputClass = 'shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline input-bg font-bold';
+    const buttonClass = 'button font-bold';
     const labelOutput = hint ? getHintLink(hint, label) : label;
     return (
       <div className="mb-4">
